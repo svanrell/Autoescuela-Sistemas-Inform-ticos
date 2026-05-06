@@ -2,7 +2,7 @@
     "exams": [
         {
             "id": "hardware",
-            "title": "Certificación: Hardware Experto",
+            "title": "Certificación: Hardware Expert",
             "description": "Domina los componentes físicos, desde la CPU hasta la placa base.",
             "icon": "🔌",
             "questions": [
@@ -10,7 +10,10 @@
                 { "question": "¿Cuál es la función principal del Northbridge?", "options": ["Gestionar USB", "Conectar CPU con RAM y GPU", "Controlar Audio", "Gestionar BIOS"], "correct": 1, "category": "Hardware" },
                 { "question": "¿Qué tipo de memoria es volátil?", "options": ["ROM", "SSD", "RAM", "BIOS"], "correct": 2, "category": "Hardware" },
                 { "question": "¿Qué bus conecta la CPU directamente con la memoria RAM?", "options": ["Front Side Bus (FSB)", "SATA", "PCI Express", "USB"], "correct": 0, "category": "Hardware" },
-                { "question": "¿Qué significan las siglas SSD?", "options": ["Super Speed Disk", "Solid State Drive", "System Storage Device", "Secure Static Drive"], "correct": 1, "category": "Hardware" }
+                { "question": "¿Qué significan las siglas SSD?", "options": ["Super Speed Disk", "Solid State Drive", "System Storage Device", "Secure Static Drive"], "correct": 1, "category": "Hardware" },
+                { "question": "¿Qué componente mantiene la configuración de la BIOS cuando el PC está apagado?", "options": ["Pila CMOS", "Condensador", "Transformador", "Chipset"], "correct": 0, "category": "Hardware" },
+                { "question": "¿Cuál es la velocidad de transferencia teórica de SATA 3?", "options": ["1.5 Gbps", "3 Gbps", "6 Gbps", "10 Gbps"], "correct": 2, "category": "Hardware" },
+                { "question": "¿Qué arquitectura de CPU es más común en dispositivos móviles?", "options": ["x86", "ARM", "RISC-V", "PowerPC"], "correct": 1, "category": "Hardware" }
             ]
         },
         {
@@ -23,7 +26,10 @@
                 { "question": "¿Cómo se listan archivos detalladamente?", "options": ["ls -l", "dir", "list", "ls -a"], "correct": 0, "category": "Linux" },
                 { "question": "¿Qué comando muestra el uso de memoria?", "options": ["free", "top", "df", "ps"], "correct": 1, "category": "Linux" },
                 { "question": "¿Qué comando se usa para ver las últimas líneas de un archivo?", "options": ["head", "cat", "tail", "grep"], "correct": 2, "category": "Linux" },
-                { "question": "¿Cuál es el directorio raíz en Linux?", "options": ["/home", "/root", "/", "/bin"], "correct": 2, "category": "Linux" }
+                { "question": "¿Cuál es el directorio raíz en Linux?", "options": ["/home", "/root", "/", "/bin"], "correct": 2, "category": "Linux" },
+                { "question": "¿Qué comando se usa para buscar texto dentro de archivos?", "options": ["find", "locate", "grep", "search"], "correct": 2, "category": "Linux" },
+                { "question": "¿Cómo se visualizan los procesos en tiempo real?", "options": ["ps aux", "top", "jobs", "kill"], "correct": 1, "category": "Linux" },
+                { "question": "¿Qué comando crea un enlace simbólico?", "options": ["ln -s", "link", "sl", "mklink"], "correct": 0, "category": "Linux" }
             ]
         },
         {
@@ -36,7 +42,10 @@
                 { "question": "¿Qué protocolo asigna IPs automáticamente?", "options": ["DNS", "DHCP", "HTTP", "FTP"], "correct": 1, "category": "Redes" },
                 { "question": "¿Cuál es la IP de localhost?", "options": ["192.168.1.1", "127.0.0.1", "10.0.0.1", "255.255.255.255"], "correct": 1, "category": "Redes" },
                 { "question": "¿Qué capa del modelo OSI se encarga del enrutamiento?", "options": ["Capa Física", "Capa de Enlace", "Capa de Red", "Capa de Transporte"], "correct": 2, "category": "Redes" },
-                { "question": "¿Qué protocolo se utiliza para la transferencia de archivos?", "options": ["SMTP", "FTP", "SNMP", "SSH"], "correct": 1, "category": "Redes" }
+                { "question": "¿Qué protocolo se utiliza para la transferencia de archivos?", "options": ["SMTP", "FTP", "SNMP", "SSH"], "correct": 1, "category": "Redes" },
+                { "question": "¿Qué comando se usa para verificar la conectividad con un host?", "options": ["traceroute", "ping", "netstat", "ipconfig"], "correct": 1, "category": "Redes" },
+                { "question": "¿Cuál es la máscara de subred por defecto para una red de clase C?", "options": ["255.0.0.0", "255.255.0.0", "255.255.255.0", "255.255.255.255"], "correct": 2, "category": "Redes" },
+                { "question": "¿Qué protocolo resuelve nombres de dominio a direcciones IP?", "options": ["DHCP", "ARP", "DNS", "ICMP"], "correct": 2, "category": "Redes" }
             ]
         },
         {
@@ -49,7 +58,10 @@
                 { "question": "¿Qué herramienta se usa para gestionar directivas de grupo?", "options": ["gpedit.msc", "regedit", "taskmgr", "msconfig"], "correct": 0, "category": "Windows" },
                 { "question": "¿Cuál es la consola de comandos avanzada de Windows?", "options": ["CMD", "PowerShell", "Terminal", "Bash"], "correct": 1, "category": "Windows" },
                 { "question": "¿Qué comando crea un directorio en Windows?", "options": ["cd", "md", "rd", "dir"], "correct": 1, "category": "Windows" },
-                { "question": "¿Qué sistema de archivos es el estándar en Windows 10/11?", "options": ["FAT32", "EXT4", "NTFS", "APFS"], "correct": 2, "category": "Windows" }
+                { "question": "¿Qué sistema de archivos es el estándar en Windows 10/11?", "options": ["FAT32", "EXT4", "NTFS", "APFS"], "correct": 2, "category": "Windows" },
+                { "question": "¿Qué comando de PowerShell muestra los servicios del sistema?", "options": ["Get-Service", "Show-Services", "List-Process", "Svc-List"], "correct": 0, "category": "Windows" },
+                { "question": "¿Cómo se abre el Administrador de Tareas desde 'Ejecutar'?", "options": ["taskmgr", "admin", "process", "control"], "correct": 0, "category": "Windows" },
+                { "question": "¿Qué comando fuerza la actualización de las GPO?", "options": ["gpupdate /force", "gprefresh", "gpconfig", "gp-reset"], "correct": 0, "category": "Windows" }
             ]
         },
         {
@@ -61,7 +73,11 @@
                 { "question": "¿Qué tipo de ataque intenta adivinar una contraseña probando todas las combinaciones?", "options": ["Phishing", "SQL Injection", "Fuerza Bruta", "DoS"], "correct": 2, "category": "Seguridad" },
                 { "question": "¿Qué protocolo cifra la navegación web?", "options": ["HTTP", "HTTPS", "FTP", "Telnet"], "correct": 1, "category": "Seguridad" },
                 { "question": "¿Qué es un Firewall?", "options": ["Un antivirus", "Un sistema de filtrado de tráfico", "Un acelerador de red", "Una base de datos de virus"], "correct": 1, "category": "Seguridad" },
-                { "question": "¿Qué tipo de software malicioso cifra tus archivos y pide un rescate?", "options": ["Spyware", "Ransomware", "Adware", "Trojan"], "correct": 1, "category": "Seguridad" }
+                { "question": "¿Qué tipo de malware cifra tus archivos y pide un rescate?", "options": ["Spyware", "Ransomware", "Adware", "Trojan"], "correct": 1, "category": "Seguridad" },
+                { "question": "¿Qué significa el acrónimo MFA?", "options": ["Multi-Factor Authentication", "Main Frame Access", "Master File Archive", "Mobile Fast App"], "correct": 0, "category": "Seguridad" },
+                { "question": "¿Cuál es la longitud mínima recomendada para una contraseña segura?", "options": ["6 caracteres", "8 caracteres", "12 caracteres", "16 caracteres"], "correct": 2, "category": "Seguridad" },
+                { "question": "¿Qué es el Phishing?", "options": ["Un virus de arranque", "Suplantación de identidad para robar datos", "Un ataque de denegación de servicio", "Un tipo de cortafuegos"], "correct": 1, "category": "Seguridad" },
+                { "question": "¿Qué puerto utiliza el protocolo SSH por defecto?", "options": ["21", "22", "23", "25"], "correct": 1, "category": "Seguridad" }
             ]
         },
         {
@@ -73,7 +89,11 @@
                 { "question": "En Docker, ¿qué comando descarga una imagen del registro?", "options": ["docker push", "docker pull", "docker run", "docker build"], "correct": 1, "category": "Cloud" },
                 { "question": "¿Qué es un hipervisor de Tipo 1?", "options": ["Corre sobre un SO", "Corre directamente sobre el hardware", "Es una aplicación web", "Es un tipo de disco duro"], "correct": 1, "category": "Cloud" },
                 { "question": "¿Qué herramienta de orquestación de contenedores es la más usada?", "options": ["Docker Compose", "Kubernetes", "VirtualBox", "VMware"], "correct": 1, "category": "Cloud" },
-                { "question": "¿Qué significa SaaS?", "options": ["Storage as a Service", "System as a Service", "Software as a Service", "Secure as a Service"], "correct": 2, "category": "Cloud" }
+                { "question": "¿Qué significa SaaS?", "options": ["Storage as a Service", "System as a Service", "Software as a Service", "Secure as a Service"], "correct": 2, "category": "Cloud" },
+                { "question": "¿Qué comando de Docker lista los contenedores en ejecución?", "options": ["docker list", "docker ps", "docker images", "docker run"], "correct": 1, "category": "Cloud" },
+                { "question": "¿Cuál de estos es un proveedor de Cloud Publica?", "options": ["Apache", "AWS", "Nginx", "Docker"], "correct": 1, "category": "Cloud" },
+                { "question": "¿Qué es la 'elasticidad' en el Cloud?", "options": ["Pagar por adelantado", "Ajustar recursos según la demanda", "Cifrar los datos", "Crear copias de seguridad"], "correct": 1, "category": "Cloud" },
+                { "question": "¿Qué archivo define la configuración de un contenedor Docker?", "options": ["config.xml", "settings.json", "Dockerfile", "manifest.yml"], "correct": 2, "category": "Cloud" }
             ]
         }
     ]

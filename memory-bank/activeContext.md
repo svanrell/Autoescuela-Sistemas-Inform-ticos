@@ -1,12 +1,13 @@
 # Active Context: Estado Actual
 
 ## Tarea en Curso
-Ampliación masiva del banco de contenidos y categorías.
+Pulido final y ampliación de contenidos.
 
 ## Foco del Momento
-- Inclusión de nuevos temas: **Administración de Windows**, **Ciberseguridad** y **Virtualización/Cloud**.
-- Aumento de la densidad de preguntas por examen para una experiencia más completa.
-- Verificación de la carga dinámica de los 6 exámenes en el Dashboard.
+- Refinar la experiencia de usuario con la navegación bidireccional.
+- Asegurar que las traducciones en inglés y catalán sean precisas.
+- Incrementar el número de preguntas por examen para mayor profundidad.
 
 ## Próximos Pasos
-1. Retocar errores visuales y pasarle a mi compañero mi trabajo.
+1. Añadir 3-5 preguntas extra por categoría.
+2. Revisión final de textos en los 3 idiomas.

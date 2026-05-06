@@ -10,20 +10,26 @@
                 { "question": "Quina és la funció principal del Northbridge?", "options": ["Gestionar USB", "Connectar CPU amb RAM i GPU", "Controlar Àudio", "Gestionar BIOS"], "correct": 1, "category": "Hardware" },
                 { "question": "Quin tipus de memòria és volàtil?", "options": ["ROM", "SSD", "RAM", "BIOS"], "correct": 2, "category": "Hardware" },
                 { "question": "Quin bus connecta la CPU directament amb la memòria RAM?", "options": ["Front Side Bus (FSB)", "SATA", "PCI Express", "USB"], "correct": 0, "category": "Hardware" },
-                { "question": "Què signifiquen les sigles SSD?", "options": ["Super Speed Disk", "Solid State Drive", "System Storage Device", "Secure Static Drive"], "correct": 1, "category": "Hardware" }
+                { "question": "Què signifiquen les sigles SSD?", "options": ["Super Speed Disk", "Solid State Drive", "System Storage Device", "Secure Static Drive"], "correct": 1, "category": "Hardware" },
+                { "question": "Quin component manté la configuració de la BIOS quan el PC està apagat?", "options": ["Pila CMOS", "Condensador", "Transformador", "Chipset"], "correct": 0, "category": "Hardware" },
+                { "question": "Quina és la velocitat de transferència teòrica de SATA 3?", "options": ["1.5 Gbps", "3 Gbps", "6 Gbps", "10 Gbps"], "correct": 2, "category": "Hardware" },
+                { "question": "Quina arquitectura de CPU és més comuna en dispositius mòbils?", "options": ["x86", "ARM", "RISC-V", "PowerPC"], "correct": 1, "category": "Hardware" }
             ]
         },
         {
             "id": "linux",
-            "title": "Mestria en Linux i Comandaments",
+            "title": "Mestria en Linux i Comandes",
             "description": "Gestió de fitxers, permisos i administració del sistema.",
             "icon": "🐧",
             "questions": [
-                { "question": "Quin comandament canvia els permisos d'un fitxer?", "options": ["chown", "chmod", "mv", "cp"], "correct": 1, "category": "Linux" },
+                { "question": "Quina comanda canvia els permisos d'un fitxer?", "options": ["chown", "chmod", "mv", "cp"], "correct": 1, "category": "Linux" },
                 { "question": "Com es llisten fitxers detalladament?", "options": ["ls -l", "dir", "list", "ls -a"], "correct": 0, "category": "Linux" },
-                { "question": "Quin comandament mostra l'ús de memòria?", "options": ["free", "top", "df", "ps"], "correct": 1, "category": "Linux" },
-                { "question": "Quin comandament s'usa per veure les últimes línies d'un fitxer?", "options": ["head", "cat", "tail", "grep"], "correct": 2, "category": "Linux" },
-                { "question": "Quin és el directori arrel a Linux?", "options": ["/home", "/root", "/", "/bin"], "correct": 2, "category": "Linux" }
+                { "question": "Quina comanda mostra l'ús de memòria?", "options": ["free", "top", "df", "ps"], "correct": 1, "category": "Linux" },
+                { "question": "Quina comanda s'usa per veure les últimes línies d'un fitxer?", "options": ["head", "cat", "tail", "grep"], "correct": 2, "category": "Linux" },
+                { "question": "Quin és el directori arrel en Linux?", "options": ["/home", "/root", "/", "/bin"], "correct": 2, "category": "Linux" },
+                { "question": "Quina comanda s'usa per cercar text dins de fitxers?", "options": ["find", "locate", "grep", "search"], "correct": 2, "category": "Linux" },
+                { "question": "Com es visualitzen els processos en temps real?", "options": ["ps aux", "top", "jobs", "kill"], "correct": 1, "category": "Linux" },
+                { "question": "Quina comanda crea un enllaç simbòlic?", "options": ["ln -s", "link", "sl", "mklink"], "correct": 0, "category": "Linux" }
             ]
         },
         {
@@ -32,24 +38,30 @@
             "description": "Protocols, IP i configuració de serveis de xarxa.",
             "icon": "🌐",
             "questions": [
-                { "question": "Quin és el port per defecte d'HTTPS?", "options": ["80", "21", "443", "22"], "correct": 2, "category": "Xarxes" },
-                { "question": "Quin protocol assigna IPs automàticament?", "options": ["DNS", "DHCP", "HTTP", "FTP"], "correct": 1, "category": "Xarxes" },
-                { "question": "Quina és la IP de localhost?", "options": ["192.168.1.1", "127.0.0.1", "10.0.0.1", "255.255.255.255"], "correct": 1, "category": "Xarxes" },
-                { "question": "Quina capa del model OSI s'encarrega de l'encaminament?", "options": ["Capa Física", "Capa d'Enllaç", "Capa de Xarxa", "Capa de Transport"], "correct": 2, "category": "Xarxes" },
-                { "question": "Quin protocol s'utilitza per a la transferència de fitxers?", "options": ["SMTP", "FTP", "SNMP", "SSH"], "correct": 1, "category": "Xarxes" }
+                { "question": "Quin és el port per defecte d'HTTPS?", "options": ["80", "21", "443", "22"], "correct": 2, "category": "Redes" },
+                { "question": "Quin protocol assigna IPs automàticament?", "options": ["DNS", "DHCP", "HTTP", "FTP"], "correct": 1, "category": "Redes" },
+                { "question": "Quina és la IP de localhost?", "options": ["192.168.1.1", "127.0.0.1", "10.0.0.1", "255.255.255.255"], "correct": 1, "category": "Redes" },
+                { "question": "Quina capa del model OSI s'encarrega de l'enrutament?", "options": ["Capa Física", "Capa d'Enllaç", "Capa de Xarxa", "Capa de Transport"], "correct": 2, "category": "Redes" },
+                { "question": "Quin protocol s'utilitza per a la transferència de fitxers?", "options": ["SMTP", "FTP", "SNMP", "SSH"], "correct": 1, "category": "Redes" },
+                { "question": "Quina comanda s'usa per verificar la connectivitat amb un host?", "options": ["traceroute", "ping", "netstat", "ipconfig"], "correct": 1, "category": "Redes" },
+                { "question": "Quina és la màscara de subxarxa per defecte per a una xarxa de classe C?", "options": ["255.0.0.0", "255.255.0.0", "255.255.255.0", "255.255.255.255"], "correct": 2, "category": "Redes" },
+                { "question": "Quin protocol resol noms de domini a adreces IP?", "options": ["DHCP", "ARP", "DNS", "ICMP"], "correct": 2, "category": "Redes" }
             ]
         },
         {
             "id": "windows",
             "title": "Administració de Windows",
-            "description": "Comandaments CMD, PowerShell i gestió d'usuaris.",
+            "description": "Comandes CMD, PowerShell i gestió d'usuaris.",
             "icon": "🪟",
             "questions": [
-                { "question": "En CMD, quin comandament mostra la configuració de xarxa?", "options": ["ifconfig", "ipconfig", "netstat", "route"], "correct": 1, "category": "Windows" },
+                { "question": "En CMD, quina comanda mostra la configuració de xarxa?", "options": ["ifconfig", "ipconfig", "netstat", "route"], "correct": 1, "category": "Windows" },
                 { "question": "Quina eina s'usa per gestionar directives de grup?", "options": ["gpedit.msc", "regedit", "taskmgr", "msconfig"], "correct": 0, "category": "Windows" },
-                { "question": "Quina és la consola de comandaments avançada de Windows?", "options": ["CMD", "PowerShell", "Terminal", "Bash"], "correct": 1, "category": "Windows" },
-                { "question": "Quin comandament crea un directori a Windows?", "options": ["cd", "md", "rd", "dir"], "correct": 1, "category": "Windows" },
-                { "question": "Quin sistema de fitxers és l'estàndard a Windows 10/11?", "options": ["FAT32", "EXT4", "NTFS", "APFS"], "correct": 2, "category": "Windows" }
+                { "question": "Quina és la consola de comandes avançada de Windows?", "options": ["CMD", "PowerShell", "Terminal", "Bash"], "correct": 1, "category": "Windows" },
+                { "question": "Quina comanda crea un directori en Windows?", "options": ["cd", "md", "rd", "dir"], "correct": 1, "category": "Windows" },
+                { "question": "Quin sistema de fitxers és l'estàndard en Windows 10/11?", "options": ["FAT32", "EXT4", "NTFS", "APFS"], "correct": 2, "category": "Windows" },
+                { "question": "Quina comanda de PowerShell mostra els serveis del sistema?", "options": ["Get-Service", "Show-Services", "List-Process", "Svc-List"], "correct": 0, "category": "Windows" },
+                { "question": "Com s'obre l'Administrador de Tasques des de 'Executar'?", "options": ["taskmgr", "admin", "process", "control"], "correct": 0, "category": "Windows" },
+                { "question": "Quina comanda força l'actualització de les GPO?", "options": ["gpupdate /force", "gprefresh", "gpconfig", "gp-reset"], "correct": 0, "category": "Windows" }
             ]
         },
         {
@@ -61,7 +73,11 @@
                 { "question": "Quin tipus d'atac intenta endevinar una contrasenya provant totes les combinacions?", "options": ["Phishing", "SQL Injection", "Força Bruta", "DoS"], "correct": 2, "category": "Seguretat" },
                 { "question": "Quin protocol xifra la navegació web?", "options": ["HTTP", "HTTPS", "FTP", "Telnet"], "correct": 1, "category": "Seguretat" },
                 { "question": "Què és un Firewall?", "options": ["Un antivirus", "Un sistema de filtratge de trànsit", "Un accelerador de xarxa", "Una base de dades de virus"], "correct": 1, "category": "Seguretat" },
-                { "question": "Quin tipus de programari maliciós xifra els teus fitxers i demana un rescat?", "options": ["Spyware", "Ransomware", "Adware", "Trojan"], "correct": 1, "category": "Seguretat" }
+                { "question": "Quin tipus de malware xifra els teus fitxers i demana un rescat?", "options": ["Spyware", "Ransomware", "Adware", "Trojan"], "correct": 1, "category": "Seguretat" },
+                { "question": "Què significa l'acrònim MFA?", "options": ["Multi-Factor Authentication", "Main Frame Access", "Master File Archive", "Mobile Fast App"], "correct": 0, "category": "Seguretat" },
+                { "question": "Quina és la longitud mínima recomanada per a una contrasenya segura?", "options": ["6 caràcters", "8 caràcters", "12 caràcters", "16 caràcters"], "correct": 2, "category": "Seguretat" },
+                { "question": "Què és el Phishing?", "options": ["Un virus d'arrencada", "Suplantació d'identitat per robar dades", "Un atac de denegació de servei", "Un tipus de tallafocs"], "correct": 1, "category": "Seguretat" },
+                { "question": "Quin port utilitza el protocol SSH per defecte?", "options": ["21", "22", "23", "25"], "correct": 1, "category": "Seguretat" }
             ]
         },
         {
@@ -70,10 +86,14 @@
             "description": "Contenidors, màquines virtuals i núvol.",
             "icon": "☁️",
             "questions": [
-                { "question": "A Docker, quin comandament descarrega una imatge del registre?", "options": ["docker push", "docker pull", "docker run", "docker build"], "correct": 1, "category": "Cloud" },
+                { "question": "En Docker, quina comanda descarrega una imatge del registre?", "options": ["docker push", "docker pull", "docker run", "docker build"], "correct": 1, "category": "Cloud" },
                 { "question": "Què és un hipervisor de Tipus 1?", "options": ["Corre sobre un SO", "Corre directament sobre el hardware", "És una aplicació web", "És un tipus de disc dur"], "correct": 1, "category": "Cloud" },
                 { "question": "Quina eina d'orquestració de contenidors és la més usada?", "options": ["Docker Compose", "Kubernetes", "VirtualBox", "VMware"], "correct": 1, "category": "Cloud" },
-                { "question": "Què significa SaaS?", "options": ["Storage as a Service", "System as a Service", "Software as a Service", "Secure as a Service"], "correct": 2, "category": "Cloud" }
+                { "question": "Què significa SaaS?", "options": ["Storage as a Service", "System as a Service", "Software as a Service", "Secure as a Service"], "correct": 2, "category": "Cloud" },
+                { "question": "Quina comanda de Docker llista els contenidors en execució?", "options": ["docker list", "docker ps", "docker images", "docker run"], "correct": 1, "category": "Cloud" },
+                { "question": "Quin d'aquests és un proveïdor de Cloud Públic?", "options": ["Apache", "AWS", "Nginx", "Docker"], "correct": 1, "category": "Cloud" },
+                { "question": "Què és l'elasticitat en el Cloud?", "options": ["Pagar per avançat", "Ajustar recursos segons la demanda", "Xifrar les dades", "Crear còpies de seguretat"], "correct": 1, "category": "Cloud" },
+                { "question": "Quin fitxer defineix la configuració d'un contenidor Docker?", "options": ["config.xml", "settings.json", "Dockerfile", "manifest.yml"], "correct": 2, "category": "Cloud" }
             ]
         }
     ]

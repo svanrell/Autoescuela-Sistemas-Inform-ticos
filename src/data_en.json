@@ -3,19 +3,22 @@
         {
             "id": "hardware",
             "title": "Hardware Expert Certification",
-            "description": "Master physical components, from the CPU to the motherboard.",
+            "description": "Master physical components, from CPU to motherboard.",
             "icon": "🔌",
             "questions": [
-                { "question": "Which component is responsible for performing arithmetic and logical operations?", "options": ["RAM Memory", "Hard Drive", "CPU (ALU)", "Graphics Card"], "correct": 2, "category": "Hardware" },
+                { "question": "Which component is responsible for performing arithmetic and logic operations?", "options": ["RAM Memory", "Hard Drive", "CPU (ALU)", "Graphics Card"], "correct": 2, "category": "Hardware" },
                 { "question": "What is the main function of the Northbridge?", "options": ["Manage USB", "Connect CPU with RAM and GPU", "Control Audio", "Manage BIOS"], "correct": 1, "category": "Hardware" },
                 { "question": "Which type of memory is volatile?", "options": ["ROM", "SSD", "RAM", "BIOS"], "correct": 2, "category": "Hardware" },
-                { "question": "Which bus connects the CPU directly to the RAM memory?", "options": ["Front Side Bus (FSB)", "SATA", "PCI Express", "USB"], "correct": 0, "category": "Hardware" },
-                { "question": "What does SSD stand for?", "options": ["Super Speed Disk", "Solid State Drive", "System Storage Device", "Secure Static Drive"], "correct": 1, "category": "Hardware" }
+                { "question": "Which bus connects the CPU directly to the RAM?", "options": ["Front Side Bus (FSB)", "SATA", "PCI Express", "USB"], "correct": 0, "category": "Hardware" },
+                { "question": "What does SSD stand for?", "options": ["Super Speed Disk", "Solid State Drive", "System Storage Device", "Secure Static Drive"], "correct": 1, "category": "Hardware" },
+                { "question": "Which component keeps the BIOS settings when the PC is off?", "options": ["CMOS Battery", "Capacitor", "Transformer", "Chipset"], "correct": 0, "category": "Hardware" },
+                { "question": "What is the theoretical transfer speed of SATA 3?", "options": ["1.5 Gbps", "3 Gbps", "6 Gbps", "10 Gbps"], "correct": 2, "category": "Hardware" },
+                { "question": "Which CPU architecture is most common in mobile devices?", "options": ["x86", "ARM", "RISC-V", "PowerPC"], "correct": 1, "category": "Hardware" }
             ]
         },
         {
             "id": "linux",
-            "title": "Linux & Commands Mastery",
+            "title": "Linux Mastery and Commands",
             "description": "File management, permissions, and system administration.",
             "icon": "🐧",
             "questions": [
@@ -23,20 +26,26 @@
                 { "question": "How do you list files in detail?", "options": ["ls -l", "dir", "list", "ls -a"], "correct": 0, "category": "Linux" },
                 { "question": "Which command shows memory usage?", "options": ["free", "top", "df", "ps"], "correct": 1, "category": "Linux" },
                 { "question": "Which command is used to see the last lines of a file?", "options": ["head", "cat", "tail", "grep"], "correct": 2, "category": "Linux" },
-                { "question": "What is the root directory in Linux?", "options": ["/home", "/root", "/", "/bin"], "correct": 2, "category": "Linux" }
+                { "question": "What is the root directory in Linux?", "options": ["/home", "/root", "/", "/bin"], "correct": 2, "category": "Linux" },
+                { "question": "Which command is used to search for text within files?", "options": ["find", "locate", "grep", "search"], "correct": 2, "category": "Linux" },
+                { "question": "How do you view processes in real time?", "options": ["ps aux", "top", "jobs", "kill"], "correct": 1, "category": "Linux" },
+                { "question": "Which command creates a symbolic link?", "options": ["ln -s", "link", "sl", "mklink"], "correct": 0, "category": "Linux" }
             ]
         },
         {
             "id": "redes",
-            "title": "Networking & Infrastructure",
-            "description": "Protocols, IP, and network service configuration.",
+            "title": "Networking and Infrastructure",
+            "description": "Protocols, IP, and network services configuration.",
             "icon": "🌐",
             "questions": [
-                { "question": "What is the default port for HTTPS?", "options": ["80", "21", "443", "22"], "correct": 2, "category": "Networks" },
-                { "question": "Which protocol assigns IPs automatically?", "options": ["DNS", "DHCP", "HTTP", "FTP"], "correct": 1, "category": "Networks" },
-                { "question": "What is the localhost IP?", "options": ["192.168.1.1", "127.0.0.1", "10.0.0.1", "255.255.255.255"], "correct": 1, "category": "Networks" },
-                { "question": "Which OSI layer is responsible for routing?", "options": ["Physical Layer", "Data Link Layer", "Network Layer", "Transport Layer"], "correct": 2, "category": "Networks" },
-                { "question": "Which protocol is used for file transfer?", "options": ["SMTP", "FTP", "SNMP", "SSH"], "correct": 1, "category": "Networks" }
+                { "question": "What is the default port for HTTPS?", "options": ["80", "21", "443", "22"], "correct": 2, "category": "Networking" },
+                { "question": "Which protocol assigns IPs automatically?", "options": ["DNS", "DHCP", "HTTP", "FTP"], "correct": 1, "category": "Networking" },
+                { "question": "What is the localhost IP address?", "options": ["192.168.1.1", "127.0.0.1", "10.0.0.1", "255.255.255.255"], "correct": 1, "category": "Networking" },
+                { "question": "Which OSI layer is responsible for routing?", "options": ["Physical Layer", "Data Link Layer", "Network Layer", "Transport Layer"], "correct": 2, "category": "Networking" },
+                { "question": "Which protocol is used for file transfer?", "options": ["SMTP", "FTP", "SNMP", "SSH"], "correct": 1, "category": "Networking" },
+                { "question": "Which command is used to check connectivity with a host?", "options": ["traceroute", "ping", "netstat", "ipconfig"], "correct": 1, "category": "Networking" },
+                { "question": "What is the default subnet mask for a class C network?", "options": ["255.0.0.0", "255.255.0.0", "255.255.255.0", "255.255.255.255"], "correct": 2, "category": "Networking" },
+                { "question": "Which protocol resolves domain names to IP addresses?", "options": ["DHCP", "ARP", "DNS", "ICMP"], "correct": 2, "category": "Networking" }
             ]
         },
         {
@@ -49,7 +58,10 @@
                 { "question": "Which tool is used to manage group policies?", "options": ["gpedit.msc", "regedit", "taskmgr", "msconfig"], "correct": 0, "category": "Windows" },
                 { "question": "What is the advanced command console in Windows?", "options": ["CMD", "PowerShell", "Terminal", "Bash"], "correct": 1, "category": "Windows" },
                 { "question": "Which command creates a directory in Windows?", "options": ["cd", "md", "rd", "dir"], "correct": 1, "category": "Windows" },
-                { "question": "Which file system is the standard in Windows 10/11?", "options": ["FAT32", "EXT4", "NTFS", "APFS"], "correct": 2, "category": "Windows" }
+                { "question": "Which file system is the standard in Windows 10/11?", "options": ["FAT32", "EXT4", "NTFS", "APFS"], "correct": 2, "category": "Windows" },
+                { "question": "Which PowerShell command shows system services?", "options": ["Get-Service", "Show-Services", "List-Process", "Svc-List"], "correct": 0, "category": "Windows" },
+                { "question": "How do you open Task Manager from 'Run'?", "options": ["taskmgr", "admin", "process", "control"], "correct": 0, "category": "Windows" },
+                { "question": "Which command forces GPO updates?", "options": ["gpupdate /force", "gprefresh", "gpconfig", "gp-reset"], "correct": 0, "category": "Windows" }
             ]
         },
         {
@@ -58,22 +70,30 @@
             "description": "Security concepts, encryption, and threats.",
             "icon": "🛡️",
             "questions": [
-                { "question": "Which type of attack tries to guess a password by testing all combinations?", "options": ["Phishing", "SQL Injection", "Brute Force", "DoS"], "correct": 2, "category": "Security" },
+                { "question": "Which type of attack tries to guess a password by trying all combinations?", "options": ["Phishing", "SQL Injection", "Brute Force", "DoS"], "correct": 2, "category": "Security" },
                 { "question": "Which protocol encrypts web browsing?", "options": ["HTTP", "HTTPS", "FTP", "Telnet"], "correct": 1, "category": "Security" },
                 { "question": "What is a Firewall?", "options": ["An antivirus", "A traffic filtering system", "A network accelerator", "A virus database"], "correct": 1, "category": "Security" },
-                { "question": "Which type of malicious software encrypts your files and asks for a ransom?", "options": ["Spyware", "Ransomware", "Adware", "Trojan"], "correct": 1, "category": "Security" }
+                { "question": "Which type of malware encrypts your files and asks for a ransom?", "options": ["Spyware", "Ransomware", "Adware", "Trojan"], "correct": 1, "category": "Security" },
+                { "question": "What does the acronym MFA stand for?", "options": ["Multi-Factor Authentication", "Main Frame Access", "Master File Archive", "Mobile Fast App"], "correct": 0, "category": "Security" },
+                { "question": "What is the recommended minimum length for a secure password?", "options": ["6 characters", "8 characters", "12 characters", "16 characters"], "correct": 2, "category": "Security" },
+                { "question": "What is Phishing?", "options": ["A boot virus", "Identity theft to steal data", "A denial of service attack", "A type of firewall"], "correct": 1, "category": "Security" },
+                { "question": "Which port does the SSH protocol use by default?", "options": ["21", "22", "23", "25"], "correct": 1, "category": "Security" }
             ]
         },
         {
             "id": "cloud",
-            "title": "Virtualization & Cloud",
+            "title": "Virtualization and Cloud",
             "description": "Containers, virtual machines, and cloud.",
             "icon": "☁️",
             "questions": [
                 { "question": "In Docker, which command downloads an image from the registry?", "options": ["docker push", "docker pull", "docker run", "docker build"], "correct": 1, "category": "Cloud" },
                 { "question": "What is a Type 1 hypervisor?", "options": ["Runs on an OS", "Runs directly on hardware", "Is a web application", "Is a type of hard drive"], "correct": 1, "category": "Cloud" },
                 { "question": "Which container orchestration tool is the most used?", "options": ["Docker Compose", "Kubernetes", "VirtualBox", "VMware"], "correct": 1, "category": "Cloud" },
-                { "question": "What does SaaS stand for?", "options": ["Storage as a Service", "System as a Service", "Software as a Service", "Secure as a Service"], "correct": 2, "category": "Cloud" }
+                { "question": "What does SaaS stand for?", "options": ["Storage as a Service", "System as a Service", "Software as a Service", "Secure as a Service"], "correct": 2, "category": "Cloud" },
+                { "question": "Which Docker command lists running containers?", "options": ["docker list", "docker ps", "docker images", "docker run"], "correct": 1, "category": "Cloud" },
+                { "question": "Which of these is a Public Cloud provider?", "options": ["Apache", "AWS", "Nginx", "Docker"], "correct": 1, "category": "Cloud" },
+                { "question": "What is 'elasticity' in the Cloud?", "options": ["Pay in advance", "Adjust resources according to demand", "Encrypt data", "Create backups"], "correct": 1, "category": "Cloud" },
+                { "question": "Which file defines the configuration of a Docker container?", "options": ["config.xml", "settings.json", "Dockerfile", "manifest.yml"], "correct": 2, "category": "Cloud" }
             ]
         }
     ]
