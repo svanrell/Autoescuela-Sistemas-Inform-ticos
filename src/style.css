@@ -82,6 +82,43 @@ h1 {
     margin-bottom: 3rem;
 }
 
+.btn-icon {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-main);
+    transition: all 0.2s;
+}
+
+.btn-exit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    color: #ef4444;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-exit:hover {
+    background: rgba(239, 68, 68, 0.2);
+    transform: translateX(3px);
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.1);
+}
+
+.exit-icon { font-size: 1.1rem; }
+
 .exam-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--glass-border);

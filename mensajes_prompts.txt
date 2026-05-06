@@ -303,34 +303,40 @@ Antigravity: "¡Claro! Vamos a darle más aire al diseño. Aumentaremos el espac
 [Archivos tocados]: src/style.css
 
 [Prompt 27 - 2026-05-06]
-Sergi V.: "Aún se queda un poco cerca del texto de arriba cuando haces el hover y parece que lo tapa. Sepáralo un poco más. También, ya he puesto lo de GitHub, así que súbelo todo a mi rama de Sergio_S para tenerlo ya guardado allí."
+Sergio S.: "Aún se queda un poco cerca del texto de arriba cuando haces el hover y parece que lo tapa. Sepáralo un poco más. También, ya he puesto lo de GitHub, así que súbelo todo a mi rama de Sergio_S para tenerlo ya guardado allí."
 
 Antigravity: "Entendido. Le daré un margen extra arriba para que no choque con el texto. También me encargo de subirlo todo a tu rama `Sergio_S` ahora mismo para que tengas la versión más reciente en la nube."
 [Archivos tocados]: src/style.css, (Operaciones de Git)
 
 [Prompt 28 - 2026-05-06]
-Sergi V.: "Oye, pon un botón para poder salir del examen cuando quiera. Ahora mismo solo se puede salir si lo terminas o si refrescas la página, y es un poco pesado si te has equivocado de examen o te cansas a mitad."
+Sergio S.: "Oye, pon un botón para poder salir del examen cuando quiera. Ahora mismo solo se puede salir si lo terminas o si refrescas la página, y es un poco pesado si te has equivocado de examen o te cansas a mitad."
 
 Antigravity: "¡Hecho! Es verdad que faltaba esa opción. He añadido una 'X' arriba a la derecha de la tarjeta del examen para que puedas volver al menú principal en cualquier momento sin complicaciones. Te preguntará si estás seguro para no perder el progreso sin querer."
 [Archivos tocados]: src/components.js, src/app.js
 
 [Prompt 29 - 2026-05-06]
-Sergi V.: "Oye, quiero que nada más entrar en la página salga un menú de bienvenida bien guapo, con el mismo estilo de cristal que ya tenemos. Que tenga un botón para entrar a los exámenes directamente. Luego ya le meteremos más cosas como el idioma, pero de momento solo que sirva de entrada."
+Sergio S.: "Oye, quiero que nada más entrar en la página salga un menú de bienvenida bien guapo, con el mismo estilo de cristal que ya tenemos. Que tenga un botón para entrar a los exámenes directamente. Luego ya le meteremos más cosas como el idioma, pero de momento solo que sirva de entrada."
 
 Antigravity: "¡Me parece una idea genial para que la app se sienta más completa! He creado una 'Landing Page' que te recibe al abrir la web con un diseño súper limpio. Solo tienes que darle al botón de 'Entrar a los Exámenes' para pasar al panel de selección. He mantenido el estilo premium para que todo encaje perfectamente."
 [Archivos tocados]: src/components.js, src/app.js
 
 [Prompt 30 - 2026-05-06]
-Sergi V.: "Oye, pon un selector de idiomas en la entrada. Quiero que se pueda elegir entre castellano, catalán e inglés, y que toda la web cambie según lo que elijas. Ah, y a partir de ahora, cuando subas las cosas a GitHub, pon la explicación de lo que has hecho en castellano."
+Sergio S.: "Oye, pon un selector de idiomas en la entrada. Quiero que se pueda elegir entre castellano, catalán e inglés, y que toda la web cambie según lo que elijas. Ah, y a partir de ahora, cuando subas las cosas a GitHub, pon la explicación de lo que has hecho en castellano."
 
 Antigravity: "¡Entendido! He añadido un selector de idiomas con banderas en la pantalla de inicio. Ahora la app es totalmente multilingüe: puedes alternar entre castellano, català y english, y tanto los textos de bienvenida como los del menú se adaptarán al instante. También he empezado a escribir los mensajes de commit en castellano como me has pedido."
 [Archivos tocados]: src/components.js, src/app.js, src/style.css
 
 [Prompt 31 - 2026-05-06]
-Sergi V.: "Oye, lo del idioma está bien pero solo cambia el menú. Quiero que cambie todo: las preguntas de los exámenes, los resultados, el historial... todo. Que si elijo inglés, hasta las preguntas del hardware salgan en inglés."
+Sergio S.: "Oye, lo del idioma está bien pero solo cambia el menú. Quiero que cambie todo: las preguntas de los exámenes, los resultados, el historial... todo. Que si elijo inglés, hasta las preguntas del hardware salgan en inglés."
 
 Antigravity: "¡Toda la razón! Me he puesto manos a la obra y ahora la traducción es total. He creado archivos de datos específicos para cada idioma (`data_en.json` y `data_ca.json`), por lo que al cambiar la lengua, se recargan todos los exámenes con sus preguntas traducidas. También he adaptado el historial, los resultados y hasta los mensajes de confirmación. ¡Ahora sí que es una app internacional de verdad!"
 [Archivos tocados]: src/components.js, src/app.js, src/data_en.json, src/data_ca.json
 
+[Prompt 32 - 2026-05-06]
+Sergio S.: "Oye, cambia lo de Sergi V. por Sergio S. en los últimos mensajes que hemos hecho, que es mi nombre de verdad. Y lo otro, el botón de salir del examen es muy soso, cámbialo por algo más chulo e interactivo, que no sea solo una X."
+
+Antigravity: "¡Hecho, Sergio! Ya he actualizado tu nombre en todo el historial reciente. También he rediseñado el botón de salida: ahora es un botón mucho más visual con el icono de una puerta y un efecto de deslizamiento al pasar el ratón. Queda mucho más integrado con el estilo premium de la app."
+[Archivos tocados]: mensajes_prompts.txt, src/components.js, src/style.css, src/app.js
+
 [Resultado]
-Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git en castellano y sincronización con la rama Sergio_S. Se ha completado la internacionalización total del proyecto, permitiendo que tanto la interfaz como el contenido de los exámenes (preguntas y opciones) se adapten dinámicamente al castellano, catalán o inglés. La aplicación ahora cuenta con una arquitectura de datos multilingüe y una experiencia de usuario global.
+Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git en castellano y sincronización con la rama Sergio_S. Se ha completado la internacionalización total del proyecto y se ha mejorado la identidad del alumno en la documentación (Sergio S.). Además, se ha rediseñado el botón de salida de los exámenes por uno más interactivo y visualmente atractivo, elevando la calidad de la experiencia de usuario.
