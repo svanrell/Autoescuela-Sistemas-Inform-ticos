@@ -105,7 +105,10 @@ export const createQuestionCard = (questionData, t) => {
         <article class="card">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
                 <div class="category-badge">${category}</div>
-                <button id="exit-exam-btn" class="btn-icon" title="${t.exit_title}">✖</button>
+                <button id="exit-exam-btn" class="btn-exit" title="${t.exit_title}">
+                    <span class="exit-icon">🚪</span>
+                    <span class="exit-text">${t.exit_label}</span>
+                </button>
             </div>
             <h2 class="question-text">${question}</h2>
             <div class="options-grid">
