@@ -73,7 +73,10 @@ export const createMenu = (data, t) => {
                 <div class="exams-grid">
                     ${examCards}
                 </div>
-                <button id="view-history-btn" class="btn-secondary">${t.history_btn}</button>
+                <div class="menu-actions" style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+                    <button id="view-history-btn" class="btn-secondary" style="flex: 1; min-width: 200px;">${t.history_btn}</button>
+                    <button id="back-home-btn" class="btn-secondary" style="flex: 1; min-width: 200px;">🏠 ${t.back_home}</button>
+                </div>
             </div>
         </div>
     `;

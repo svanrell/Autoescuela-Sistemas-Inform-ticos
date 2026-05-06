@@ -28,6 +28,7 @@ const translations = {
         confirm_exit: "¿Seguro que quieres salir del examen? No se guardará tu progreso.",
         back_menu: "Finalizar y Volver",
         exit_label: "Salir",
+        back_home: "Volver al Inicio",
         question_label: "Pregunta",
         of: "de",
         exit_title: "Salir del examen",
@@ -49,6 +50,7 @@ const translations = {
         confirm_exit: "Segur que vols sortir de l'examen? No es guardarà el teu progrés.",
         back_menu: "Finalitzar i Tornar",
         exit_label: "Sortir",
+        back_home: "Tornar a l'Inici",
         question_label: "Pregunta",
         of: "de",
         exit_title: "Sortir de l'examen",
@@ -70,6 +72,7 @@ const translations = {
         confirm_exit: "Are you sure you want to exit the exam? Your progress will not be saved.",
         back_menu: "Finish and Return",
         exit_label: "Exit",
+        back_home: "Back to Home",
         question_label: "Question",
         of: "of",
         exit_title: "Exit exam",
@@ -153,6 +156,12 @@ function setupMenuListeners() {
     // Listener para historial
     document.getElementById('view-history-btn').addEventListener('click', () => {
         state.view = 'history';
+        render();
+    });
+
+    // Listener para volver al inicio
+    document.getElementById('back-home-btn').addEventListener('click', () => {
+        state.view = 'home';
         render();
     });
 }
