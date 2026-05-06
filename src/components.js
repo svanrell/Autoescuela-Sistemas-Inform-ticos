@@ -11,6 +11,25 @@ export const createHeader = (title) => {
     `;
 };
 
+export const createLanding = () => {
+    return `
+        <div class="landing-container card">
+            <div class="hero-icon">🚀</div>
+            <h2>¡Bienvenido a la Autoescuela de Sistemas!</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6;">
+                La plataforma definitiva para dominar tus exámenes de sistemas informáticos. 
+                Hardware, Redes, Linux y más, con tests interactivos diseñados para tu éxito.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
+                <button id="start-app-btn" class="btn-primary">Entrar a los Exámenes</button>
+                <p style="text-align: center; font-size: 0.75rem; color: var(--text-muted);">
+                    Prepárate para el futuro de la informática.
+                </p>
+            </div>
+        </div>
+    `;
+};
+
 /**
  * Crea el Menú Principal con selección de exámenes
  */
