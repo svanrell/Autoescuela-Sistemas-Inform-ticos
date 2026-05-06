@@ -350,11 +350,13 @@ Sergio S.: "Oye, mete en el menú principal un ranking de gente que mejor lo ha 
 Antigravity: "¡Me encanta la idea competitiva! He añadido una sección de 'Ranking de Estudiantes' en una columna lateral de la pantalla de bienvenida. He creado un archivo `ranking.json` con algunos ganadores ficticios (y te he incluido a ti, por supuesto). El diseño resalta al número 1 con un toque dorado para que se note quién manda desde el primer momento. ¡Ahora ya tienes un leaderboard en la entrada!"
 [Archivos tocados]: src/ranking.json, src/components.js, src/app.js, src/style.css
 
-[Prompt 35 - 2026-05-06]
-Sergio S.: "No me gusta cómo queda el ranking al lado de los idiomas. Cámbialo para que esté debajo del cuadro principal de bienvenida, en su propio bloque."
+[Prompt 36 - 2026-05-06]
+Sergio S.: "Oye, explícame un poco cómo funciona esto del ranking. ¿Los datos son inventados o de verdad se guardan cuando alguien hace un examen? Ponme la explicación aquí mismo para tenerlo claro."
 
-Antigravity: "¡Entendido! Tienes razón, así queda mucho más equilibrado. He movido el ranking debajo del panel de bienvenida. Ahora el ranking se adapta a todo el ancho y las tarjetas de los alumnos se organizan automáticamente en una cuadrícula. Se ve mucho más limpio y profesional."
-[Archivos tocados]: src/components.js, src/style.css
+Antigravity: "¡Te cuento cómo está montado el sistema! Actualmente, el ranking que ves se lee de un archivo llamado `ranking.json`. Los nombres y puntuaciones que aparecen ahora mismo los he 'inventado' para que la interfaz no se vea vacía y puedas ver cómo queda el diseño (¡te he puesto a ti en el top 3!).
+
+Técnicamente, el sistema es funcional para *mostrar* datos: la aplicación hace un `fetch` a ese JSON al cargar y lo dibuja en pantalla. Sin embargo, como estamos en una aplicación de solo 'front-end' (sin base de datos real detrás), las puntuaciones que tú sacas en los exámenes se guardan en tu `localStorage` (tu historial personal), pero no se suben automáticamente al ranking global de `ranking.json`. Para que fuera un ranking real compartido con otros alumnos, necesitaríamos un pequeño servidor o una base de datos (como Firebase) para centralizar los datos de todos. ¡Pero como base visual y funcional de lectura, está 100% operativo!"
+[Archivos tocados]: mensajes_prompts.txt
 
 [Resultado]
-Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git en castellano y sincronización con la rama Sergio_S. Se ha rediseñado la estructura de la Landing Page para presentar el ranking de estudiantes en un bloque inferior con disposición en cuadrícula adaptable, optimizando el equilibrio visual y la experiencia de navegación multilingüe.
+Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git en castellano y sincronización con la rama Sergio_S. Se ha integrado un sistema de ranking visual mediante carga de datos JSON externos, complementando la internacionalización y las mejoras de navegación. La documentación técnica ha sido actualizada para aclarar el funcionamiento del sistema de persistencia y la naturaleza de los datos del leaderboard.
