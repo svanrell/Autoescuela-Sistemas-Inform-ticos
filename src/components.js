@@ -79,20 +79,20 @@ export const createMenu = (data, t) => {
     `;
 };
 
-export const createProgressBar = (current, total) => {
+export const createProgressBar = (current, total, t) => {
     const percentage = (current / total) * 100;
     return `
         <div class="progress-container">
             <div class="progress-fill" style="width: ${percentage}%"></div>
         </div>
         <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">
-            <span>Pregunta ${current + 1} de ${total}</span>
+            <span>${t.question_label} ${current + 1} ${t.of} ${total}</span>
             <span>${Math.round(percentage)}%</span>
         </div>
     `;
 };
 
-export const createQuestionCard = (questionData) => {
+export const createQuestionCard = (questionData, t) => {
     const { question, options, category } = questionData;
     const optionsHTML = options.map((option, index) => `
         <button class="option-btn" data-index="${index}">
@@ -105,7 +105,7 @@ export const createQuestionCard = (questionData) => {
         <article class="card">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
                 <div class="category-badge">${category}</div>
-                <button id="exit-exam-btn" class="btn-icon" title="Salir del examen">✖</button>
+                <button id="exit-exam-btn" class="btn-icon" title="${t.exit_title}">✖</button>
             </div>
             <h2 class="question-text">${question}</h2>
             <div class="options-grid">
@@ -115,21 +115,21 @@ export const createQuestionCard = (questionData) => {
     `;
 };
 
-export const createResultsView = (score, total, examTitle) => {
+export const createResultsView = (score, total, examTitle, t) => {
     const percentage = (score / total) * 100;
     let icon = percentage >= 50 ? "🎉" : "💪";
     
     return `
         <div class="card results-header">
             <div class="hero-icon">${icon}</div>
-            <h2>¡Examen Finalizado!</h2>
+            <h2>${t.exam_finished}</h2>
             <p style="color: var(--text-muted); margin-bottom: 1rem;">${examTitle}</p>
             <div class="score-circle">
                 <span class="score-num">${score}</span>
-                <span class="score-total">de ${total}</span>
+                <span class="score-total">${t.of} ${total}</span>
             </div>
             <div class="results-actions">
-                <button id="back-menu-btn" class="btn-primary">Finalizar y Volver</button>
+                <button id="back-menu-btn" class="btn-primary">${t.back_menu}</button>
             </div>
         </div>
     `;
@@ -138,7 +138,7 @@ export const createResultsView = (score, total, examTitle) => {
 /**
  * Crea la Vista de Historial / Resumen
  */
-export const createHistoryView = (history) => {
+export const createHistoryView = (history, t) => {
     const historyRows = history.length > 0 
         ? history.map(item => `
             <div class="history-item">
@@ -154,12 +154,12 @@ export const createHistoryView = (history) => {
                 </div>
             </div>
         `).reverse().join('')
-        : `<p style="text-align: center; color: var(--text-muted); padding: 2rem;">No hay exámenes realizados todavía.</p>`;
+        : `<p style="text-align: center; color: var(--text-muted); padding: 2rem;">${t.no_history}</p>`;
 
     return `
         <div class="card history-container">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-                <h2>Tu Historial</h2>
+                <h2>${t.your_history}</h2>
                 <button id="close-history-btn" class="btn-icon">✖</button>
             </div>
             <div class="history-list">
@@ -168,11 +168,11 @@ export const createHistoryView = (history) => {
             <div class="history-summary">
                 <div class="summary-box">
                     <span class="summary-val">${history.length}</span>
-                    <span class="summary-lab">Total</span>
+                    <span class="summary-lab">${t.total}</span>
                 </div>
                 <div class="summary-box">
                     <span class="summary-val">${history.filter(h => h.score >= (h.total/2)).length}</span>
-                    <span class="summary-lab">Aprobados</span>
+                    <span class="summary-lab">${t.passed}</span>
                 </div>
             </div>
         </div>

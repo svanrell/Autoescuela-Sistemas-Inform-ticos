@@ -26,7 +26,15 @@ const translations = {
         history_btn: "📜 Ver Historial de Exámenes",
         questions_count: "Preguntas",
         confirm_exit: "¿Seguro que quieres salir del examen? No se guardará tu progreso.",
-        back_menu: "Finalizar y Volver"
+        back_menu: "Finalizar y Volver",
+        question_label: "Pregunta",
+        of: "de",
+        exit_title: "Salir del examen",
+        exam_finished: "¡Examen Finalizado!",
+        your_history: "Tu Historial",
+        no_history: "No hay exámenes realizados todavía.",
+        total: "Total",
+        passed: "Aprobados"
     },
     ca: {
         welcome: "Benvingut a l'Autoescola de Sistemes!",
@@ -38,7 +46,15 @@ const translations = {
         history_btn: "📜 Veure Historial d'Exàmens",
         questions_count: "Preguntes",
         confirm_exit: "Segur que vols sortir de l'examen? No es guardarà el teu progrés.",
-        back_menu: "Finalitzar i Tornar"
+        back_menu: "Finalitzar i Tornar",
+        question_label: "Pregunta",
+        of: "de",
+        exit_title: "Sortir de l'examen",
+        exam_finished: "Examen Finalitzat!",
+        your_history: "El Teu Historial",
+        no_history: "No hi ha exàmens realitzats encara.",
+        total: "Total",
+        passed: "Aprovats"
     },
     en: {
         welcome: "Welcome to the Systems School!",
@@ -50,15 +66,24 @@ const translations = {
         history_btn: "📜 View Exam History",
         questions_count: "Questions",
         confirm_exit: "Are you sure you want to exit the exam? Your progress will not be saved.",
-        back_menu: "Finish and Return"
+        back_menu: "Finish and Return",
+        question_label: "Question",
+        of: "of",
+        exit_title: "Exit exam",
+        exam_finished: "Exam Finished!",
+        your_history: "Your History",
+        no_history: "No exams completed yet.",
+        total: "Total",
+        passed: "Passed"
     }
 };
 
 const appContainer = document.getElementById('app');
 
 async function init() {
+    const dataFile = state.lang === 'es' ? 'data.json' : `data_${state.lang}.json`;
     try {
-        const response = await fetch('data.json');
+        const response = await fetch(dataFile);
         const data = await response.json();
         state.allExams = data.exams;
         render();
@@ -87,7 +112,7 @@ function render() {
             renderResults();
             break;
         case 'history':
-            appContainer.innerHTML += components.createHistoryView(state.history);
+            appContainer.innerHTML += components.createHistoryView(state.history, t);
             setupHistoryListeners();
             break;
     }
@@ -103,7 +128,7 @@ function setupLandingListeners() {
         btn.addEventListener('click', () => {
             state.lang = btn.dataset.lang;
             localStorage.setItem('userLang', state.lang);
-            render();
+            init(); // Recargar datos para el nuevo idioma
         });
     });
 }
@@ -130,11 +155,12 @@ function setupMenuListeners() {
 }
 
 function renderTest() {
+    const t = translations[state.lang];
     const { currentExam, currentIndex } = state;
     const question = currentExam.questions[currentIndex];
     
-    appContainer.innerHTML += components.createProgressBar(currentIndex, currentExam.questions.length);
-    appContainer.innerHTML += components.createQuestionCard(question);
+    appContainer.innerHTML += components.createProgressBar(currentIndex, currentExam.questions.length, t);
+    appContainer.innerHTML += components.createQuestionCard(question, t);
 
     document.querySelectorAll('.option-btn').forEach(btn => {
         btn.addEventListener('click', handleAnswer);
@@ -177,10 +203,12 @@ function handleAnswer(event) {
 }
 
 function renderResults() {
+    const t = translations[state.lang];
     appContainer.innerHTML += components.createResultsView(
         state.score, 
         state.currentExam.questions.length,
-        state.currentExam.title
+        state.currentExam.title,
+        t
     );
     
     document.getElementById('back-menu-btn').addEventListener('click', () => {

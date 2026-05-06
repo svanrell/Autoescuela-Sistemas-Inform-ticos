@@ -1,0 +1,80 @@
+{
+    "exams": [
+        {
+            "id": "hardware",
+            "title": "Certificació: Hardware Expert",
+            "description": "Domina els components físics, des de la CPU fins a la placa base.",
+            "icon": "🔌",
+            "questions": [
+                { "question": "Quin component s'encarrega de realitzar les operacions aritmètiques i lògiques?", "options": ["Memòria RAM", "Disc Dur", "CPU (ALU)", "Targeta Gràfica"], "correct": 2, "category": "Hardware" },
+                { "question": "Quina és la funció principal del Northbridge?", "options": ["Gestionar USB", "Connectar CPU amb RAM i GPU", "Controlar Àudio", "Gestionar BIOS"], "correct": 1, "category": "Hardware" },
+                { "question": "Quin tipus de memòria és volàtil?", "options": ["ROM", "SSD", "RAM", "BIOS"], "correct": 2, "category": "Hardware" },
+                { "question": "Quin bus connecta la CPU directament amb la memòria RAM?", "options": ["Front Side Bus (FSB)", "SATA", "PCI Express", "USB"], "correct": 0, "category": "Hardware" },
+                { "question": "Què signifiquen les sigles SSD?", "options": ["Super Speed Disk", "Solid State Drive", "System Storage Device", "Secure Static Drive"], "correct": 1, "category": "Hardware" }
+            ]
+        },
+        {
+            "id": "linux",
+            "title": "Mestria en Linux i Comandaments",
+            "description": "Gestió de fitxers, permisos i administració del sistema.",
+            "icon": "🐧",
+            "questions": [
+                { "question": "Quin comandament canvia els permisos d'un fitxer?", "options": ["chown", "chmod", "mv", "cp"], "correct": 1, "category": "Linux" },
+                { "question": "Com es llisten fitxers detalladament?", "options": ["ls -l", "dir", "list", "ls -a"], "correct": 0, "category": "Linux" },
+                { "question": "Quin comandament mostra l'ús de memòria?", "options": ["free", "top", "df", "ps"], "correct": 1, "category": "Linux" },
+                { "question": "Quin comandament s'usa per veure les últimes línies d'un fitxer?", "options": ["head", "cat", "tail", "grep"], "correct": 2, "category": "Linux" },
+                { "question": "Quin és el directori arrel a Linux?", "options": ["/home", "/root", "/", "/bin"], "correct": 2, "category": "Linux" }
+            ]
+        },
+        {
+            "id": "redes",
+            "title": "Xarxes i Infraestructura",
+            "description": "Protocols, IP i configuració de serveis de xarxa.",
+            "icon": "🌐",
+            "questions": [
+                { "question": "Quin és el port per defecte d'HTTPS?", "options": ["80", "21", "443", "22"], "correct": 2, "category": "Xarxes" },
+                { "question": "Quin protocol assigna IPs automàticament?", "options": ["DNS", "DHCP", "HTTP", "FTP"], "correct": 1, "category": "Xarxes" },
+                { "question": "Quina és la IP de localhost?", "options": ["192.168.1.1", "127.0.0.1", "10.0.0.1", "255.255.255.255"], "correct": 1, "category": "Xarxes" },
+                { "question": "Quina capa del model OSI s'encarrega de l'encaminament?", "options": ["Capa Física", "Capa d'Enllaç", "Capa de Xarxa", "Capa de Transport"], "correct": 2, "category": "Xarxes" },
+                { "question": "Quin protocol s'utilitza per a la transferència de fitxers?", "options": ["SMTP", "FTP", "SNMP", "SSH"], "correct": 1, "category": "Xarxes" }
+            ]
+        },
+        {
+            "id": "windows",
+            "title": "Administració de Windows",
+            "description": "Comandaments CMD, PowerShell i gestió d'usuaris.",
+            "icon": "🪟",
+            "questions": [
+                { "question": "En CMD, quin comandament mostra la configuració de xarxa?", "options": ["ifconfig", "ipconfig", "netstat", "route"], "correct": 1, "category": "Windows" },
+                { "question": "Quina eina s'usa per gestionar directives de grup?", "options": ["gpedit.msc", "regedit", "taskmgr", "msconfig"], "correct": 0, "category": "Windows" },
+                { "question": "Quina és la consola de comandaments avançada de Windows?", "options": ["CMD", "PowerShell", "Terminal", "Bash"], "correct": 1, "category": "Windows" },
+                { "question": "Quin comandament crea un directori a Windows?", "options": ["cd", "md", "rd", "dir"], "correct": 1, "category": "Windows" },
+                { "question": "Quin sistema de fitxers és l'estàndard a Windows 10/11?", "options": ["FAT32", "EXT4", "NTFS", "APFS"], "correct": 2, "category": "Windows" }
+            ]
+        },
+        {
+            "id": "seguridad",
+            "title": "Ciberseguretat Bàsica",
+            "description": "Conceptes de seguretat, xifrat i amenaces.",
+            "icon": "🛡️",
+            "questions": [
+                { "question": "Quin tipus d'atac intenta endevinar una contrasenya provant totes les combinacions?", "options": ["Phishing", "SQL Injection", "Força Bruta", "DoS"], "correct": 2, "category": "Seguretat" },
+                { "question": "Quin protocol xifra la navegació web?", "options": ["HTTP", "HTTPS", "FTP", "Telnet"], "correct": 1, "category": "Seguretat" },
+                { "question": "Què és un Firewall?", "options": ["Un antivirus", "Un sistema de filtratge de trànsit", "Un accelerador de xarxa", "Una base de dades de virus"], "correct": 1, "category": "Seguretat" },
+                { "question": "Quin tipus de programari maliciós xifra els teus fitxers i demana un rescat?", "options": ["Spyware", "Ransomware", "Adware", "Trojan"], "correct": 1, "category": "Seguretat" }
+            ]
+        },
+        {
+            "id": "cloud",
+            "title": "Virtualització i Cloud",
+            "description": "Contenidors, màquines virtuals i núvol.",
+            "icon": "☁️",
+            "questions": [
+                { "question": "A Docker, quin comandament descarrega una imatge del registre?", "options": ["docker push", "docker pull", "docker run", "docker build"], "correct": 1, "category": "Cloud" },
+                { "question": "Què és un hipervisor de Tipus 1?", "options": ["Corre sobre un SO", "Corre directament sobre el hardware", "És una aplicació web", "És un tipus de disc dur"], "correct": 1, "category": "Cloud" },
+                { "question": "Quina eina d'orquestració de contenidors és la més usada?", "options": ["Docker Compose", "Kubernetes", "VirtualBox", "VMware"], "correct": 1, "category": "Cloud" },
+                { "question": "Què significa SaaS?", "options": ["Storage as a Service", "System as a Service", "Software as a Service", "Secure as a Service"], "correct": 2, "category": "Cloud" }
+            ]
+        }
+    ]
+}
