@@ -338,5 +338,11 @@ Sergio S.: "Oye, cambia lo de Sergi V. por Sergio S. en los últimos mensajes qu
 Antigravity: "¡Hecho, Sergio! Ya he actualizado tu nombre en todo el historial reciente. También he rediseñado el botón de salida: ahora es un botón mucho más visual con el icono de una puerta y un efecto de deslizamiento al pasar el ratón. Queda mucho más integrado con el estilo premium de la app."
 [Archivos tocados]: mensajes_prompts.txt, src/components.js, src/style.css, src/app.js
 
+[Prompt 33 - 2026-05-06]
+Sergio S.: "Oye, pon un botón en el menú donde se eligen los exámenes para poder volver a la pantalla del principio, la de bienvenida. Así si quiero cambiar el idioma a mitad puedo hacerlo sin tener que recargar la página."
+
+Antigravity: "¡Buena idea! He añadido un botón de 'Volver al Inicio' justo al lado del historial. Ahora puedes moverte fácilmente entre el panel de exámenes y la pantalla de bienvenida para cambiar el idioma o simplemente volver a empezar. He usado un icono de casa (🏠) para que se identifique rápido."
+[Archivos tocados]: src/components.js, src/app.js
+
 [Resultado]
-Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git en castellano y sincronización con la rama Sergio_S. Se ha completado la internacionalización total del proyecto y se ha mejorado la identidad del alumno en la documentación (Sergio S.). Además, se ha rediseñado el botón de salida de los exámenes por uno más interactivo y visualmente atractivo, elevando la calidad de la experiencia de usuario.
+Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git en castellano y sincronización con la rama Sergio_S. Se ha completado la internacionalización total del proyecto y se ha mejorado la navegación interna con la posibilidad de regresar a la Landing Page desde el panel de control. La aplicación ahora ofrece una experiencia de usuario fluida, multilingüe y visualmente coherente bajo la identidad de Sergio S.
