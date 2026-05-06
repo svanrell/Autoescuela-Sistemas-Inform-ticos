@@ -64,7 +64,10 @@ export const createQuestionCard = (questionData) => {
 
     return `
         <article class="card">
-            <div class="category-badge">${category}</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <div class="category-badge">${category}</div>
+                <button id="exit-exam-btn" class="btn-icon" title="Salir del examen">✖</button>
+            </div>
             <h2 class="question-text">${question}</h2>
             <div class="options-grid">
                 ${optionsHTML}

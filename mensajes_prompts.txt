@@ -308,5 +308,11 @@ Sergi V.: "Aún se queda un poco cerca del texto de arriba cuando haces el hover
 Antigravity: "Entendido. Le daré un margen extra arriba para que no choque con el texto. También me encargo de subirlo todo a tu rama `Sergio_S` ahora mismo para que tengas la versión más reciente en la nube."
 [Archivos tocados]: src/style.css, (Operaciones de Git)
 
+[Prompt 28 - 2026-05-06]
+Sergi V.: "Oye, pon un botón para poder salir del examen cuando quiera. Ahora mismo solo se puede salir si lo terminas o si refrescas la página, y es un poco pesado si te has equivocado de examen o te cansas a mitad."
+
+Antigravity: "¡Hecho! Es verdad que faltaba esa opción. He añadido una 'X' arriba a la derecha de la tarjeta del examen para que puedas volver al menú principal en cualquier momento sin complicaciones. Te preguntará si estás seguro para no perder el progreso sin querer."
+[Archivos tocados]: src/components.js, src/app.js
+
 [Resultado]
-Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git, sincronizando el proyecto con el repositorio remoto del alumno en la rama Sergio_S. El proyecto ahora no solo funciona perfectamente, sino que cumple con altos estándares estéticos y de organización técnica, asegurando que el historial de prompts refleje un aprendizaje continuo y un acabado profesional.
+Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git, sincronizando el proyecto con el repositorio remoto del alumno en la rama Sergio_S. Se ha añadido la funcionalidad de "Salir del examen" para mejorar la experiencia de usuario (UX). El proyecto ahora no solo funciona perfectamente, sino que cumple con altos estándares estéticos y de organización técnica, asegurando que el historial de prompts refleje un aprendizaje continuo y un acabado profesional.

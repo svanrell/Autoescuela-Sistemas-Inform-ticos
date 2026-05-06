@@ -79,6 +79,13 @@ function renderTest() {
     document.querySelectorAll('.option-btn').forEach(btn => {
         btn.addEventListener('click', handleAnswer);
     });
+
+    document.getElementById('exit-exam-btn').addEventListener('click', () => {
+        if (confirm('¿Seguro que quieres salir del examen? No se guardará tu progreso.')) {
+            state.view = 'menu';
+            render();
+        }
+    });
 }
 
 function handleAnswer(event) {
