@@ -1,0 +1,9 @@
+{
+    "ranking": [
+        { "name": "Marcos G.", "score": 28, "total": 30, "date": "2026-05-01" },
+        { "name": "Lucía R.", "score": 26, "total": 30, "date": "2026-05-02" },
+        { "name": "Sergio S.", "score": 25, "total": 30, "date": "2026-05-06" },
+        { "name": "Elena M.", "score": 24, "total": 30, "date": "2026-05-03" },
+        { "name": "David L.", "score": 22, "total": 30, "date": "2026-05-04" }
+    ]
+}

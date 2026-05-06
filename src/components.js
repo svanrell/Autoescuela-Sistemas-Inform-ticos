@@ -31,21 +31,27 @@ export const createLanguageSelector = (currentLang) => {
     `;
 };
 
-export const createLanding = (t, currentLang) => {
+export const createLanding = (t, currentLang, rankingData) => {
     return `
-        <div class="landing-container card">
-            ${createLanguageSelector(currentLang)}
-            <div class="hero-icon">🚀</div>
-            <h2>${t.welcome}</h2>
-            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6;">
-                ${t.desc}
-            </p>
-            <div style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
-                <button id="start-app-btn" class="btn-primary">${t.start}</button>
-                <p style="text-align: center; font-size: 0.75rem; color: var(--text-muted);">
-                    ${t.footer}
+        <div class="landing-container dashboard-grid">
+            <div class="card landing-main">
+                ${createLanguageSelector(currentLang)}
+                <div class="hero-icon">🚀</div>
+                <h2>${t.welcome}</h2>
+                <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6;">
+                    ${t.desc}
                 </p>
+                <div style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
+                    <button id="start-app-btn" class="btn-primary">${t.start}</button>
+                    <p style="text-align: center; font-size: 0.75rem; color: var(--text-muted);">
+                        ${t.footer}
+                    </p>
+                </div>
             </div>
+
+            <aside class="card side-card">
+                ${createRanking(rankingData, t)}
+            </aside>
         </div>
     `;
 };
@@ -53,6 +59,27 @@ export const createLanding = (t, currentLang) => {
 /**
  * Crea el Menú Principal con selección de exámenes
  */
+export const createRanking = (rankingData, t) => {
+    const rankingRows = rankingData.map((user, index) => `
+        <div class="ranking-item ${index === 0 ? 'top-1' : ''}">
+            <div class="ranking-pos">${index + 1}º</div>
+            <div class="ranking-name">${user.name}</div>
+            <div class="ranking-score">${user.score}/${user.total}</div>
+        </div>
+    `).join('');
+
+    return `
+        <div class="ranking-section">
+            <h3 style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                🏆 ${t.ranking_title}
+            </h3>
+            <div class="ranking-list">
+                ${rankingRows}
+            </div>
+        </div>
+    `;
+};
+
 export const createMenu = (data, t) => {
     const examCards = data.exams.map(exam => `
         <div class="exam-card" data-id="${exam.id}">

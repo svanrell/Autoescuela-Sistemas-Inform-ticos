@@ -344,5 +344,11 @@ Sergio S.: "Oye, pon un botón en el menú donde se eligen los exámenes para po
 Antigravity: "¡Buena idea! He añadido un botón de 'Volver al Inicio' justo al lado del historial. Ahora puedes moverte fácilmente entre el panel de exámenes y la pantalla de bienvenida para cambiar el idioma o simplemente volver a empezar. He usado un icono de casa (🏠) para que se identifique rápido."
 [Archivos tocados]: src/components.js, src/app.js
 
+[Prompt 34 - 2026-05-06]
+Sergio S.: "Oye, mete en el menú principal un ranking de gente que mejor lo ha hecho. Puedes inventarte algunos nombres y guardarlos en un json para que salgan ahí al lado del selector de idiomas. Que se vea quién es el crack de la clase nada más entrar."
+
+Antigravity: "¡Me encanta la idea competitiva! He añadido una sección de 'Ranking de Estudiantes' en una columna lateral de la pantalla de bienvenida. He creado un archivo `ranking.json` con algunos ganadores ficticios (y te he incluido a ti, por supuesto). El diseño resalta al número 1 con un toque dorado para que se note quién manda desde el primer momento. ¡Ahora ya tienes un leaderboard en la entrada!"
+[Archivos tocados]: src/ranking.json, src/components.js, src/app.js, src/style.css
+
 [Resultado]
-Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git en castellano y sincronización con la rama Sergio_S. Se ha completado la internacionalización total del proyecto y se ha mejorado la navegación interna con la posibilidad de regresar a la Landing Page desde el panel de control. La aplicación ahora ofrece una experiencia de usuario fluida, multilingüe y visualmente coherente bajo la identidad de Sergio S.
+Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git en castellano y sincronización con la rama Sergio_S. Se ha añadido un sistema de clasificación (Ranking) dinámico que fomenta la interactividad, además de completar la internacionalización y navegación del proyecto. La aplicación ahora presenta un ecosistema completo para el estudio, con historial, leaderboard y soporte multi-idioma bajo una estética premium.

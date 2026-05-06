@@ -6,6 +6,7 @@ import * as components from './components.js';
 
 const state = {
     allExams: [],
+    ranking: [],
     currentExam: null,
     currentIndex: 0,
     score: 0,
@@ -36,7 +37,8 @@ const translations = {
         your_history: "Tu Historial",
         no_history: "No hay exámenes realizados todavía.",
         total: "Total",
-        passed: "Aprobados"
+        passed: "Aprobados",
+        ranking_title: "Ranking de Estudiantes"
     },
     ca: {
         welcome: "Benvingut a l'Autoescola de Sistemes!",
@@ -58,7 +60,8 @@ const translations = {
         your_history: "El Teu Historial",
         no_history: "No hi ha exàmens realitzats encara.",
         total: "Total",
-        passed: "Aprovats"
+        passed: "Aprovats",
+        ranking_title: "Rànquing d'Estudiants"
     },
     en: {
         welcome: "Welcome to the Systems School!",
@@ -80,7 +83,8 @@ const translations = {
         your_history: "Your History",
         no_history: "No exams completed yet.",
         total: "Total",
-        passed: "Passed"
+        passed: "Passed",
+        ranking_title: "Student Ranking"
     }
 };
 
@@ -89,9 +93,15 @@ const appContainer = document.getElementById('app');
 async function init() {
     const dataFile = state.lang === 'es' ? 'data.json' : `data_${state.lang}.json`;
     try {
-        const response = await fetch(dataFile);
-        const data = await response.json();
-        state.allExams = data.exams;
+        const [examsRes, rankingRes] = await Promise.all([
+            fetch(dataFile),
+            fetch('ranking.json')
+        ]);
+        const examsData = await examsRes.json();
+        const rankingData = await rankingRes.json();
+        
+        state.allExams = examsData.exams;
+        state.ranking = rankingData.ranking;
         render();
     } catch (error) {
         console.error("Error cargando datos:", error);
@@ -104,11 +114,13 @@ function render() {
 
     switch (state.view) {
         case 'home':
-            appContainer.innerHTML += components.createLanding(t, state.lang);
+            appContainer.innerHTML += components.createLanding(t, state.lang, state.ranking);
             setupLandingListeners();
             break;
         case 'menu':
-            appContainer.innerHTML += components.createMenu({ exams: state.allExams }, t);
+            appContainer.innerHTML += components.createMenu({ 
+                exams: state.allExams
+            }, t);
             setupMenuListeners();
             break;
         case 'test':
