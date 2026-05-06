@@ -53,6 +53,27 @@ export const createLanding = (t, currentLang) => {
 /**
  * Crea el Menú Principal con selección de exámenes
  */
+export const createRanking = (rankingData, t) => {
+    const rankingRows = rankingData.map((user, index) => `
+        <div class="ranking-item ${index === 0 ? 'top-1' : ''}">
+            <div class="ranking-pos">${index + 1}º</div>
+            <div class="ranking-name">${user.name}</div>
+            <div class="ranking-score">${user.score}/${user.total}</div>
+        </div>
+    `).join('');
+
+    return `
+        <div class="ranking-section">
+            <h3 style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                🏆 ${t.ranking_title}
+            </h3>
+            <div class="ranking-list">
+                ${rankingRows}
+            </div>
+        </div>
+    `;
+};
+
 export const createMenu = (data, t) => {
     const examCards = data.exams.map(exam => `
         <div class="exam-card" data-id="${exam.id}">
@@ -67,16 +88,22 @@ export const createMenu = (data, t) => {
 
     return `
         <div class="menu-container">
-            <div class="card main-card">
-                <h2>${t.choose}</h2>
-                <p class="question-text">${t.choose_desc}</p>
-                <div class="exams-grid">
-                    ${examCards}
+            <div class="dashboard-grid">
+                <div class="card main-card">
+                    <h2>${t.choose}</h2>
+                    <p class="question-text">${t.choose_desc}</p>
+                    <div class="exams-grid">
+                        ${examCards}
+                    </div>
+                    <div class="menu-actions" style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+                        <button id="view-history-btn" class="btn-secondary" style="flex: 1; min-width: 200px;">${t.history_btn}</button>
+                        <button id="back-home-btn" class="btn-secondary" style="flex: 1; min-width: 200px;">🏠 ${t.back_home}</button>
+                    </div>
                 </div>
-                <div class="menu-actions" style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
-                    <button id="view-history-btn" class="btn-secondary" style="flex: 1; min-width: 200px;">${t.history_btn}</button>
-                    <button id="back-home-btn" class="btn-secondary" style="flex: 1; min-width: 200px;">🏠 ${t.back_home}</button>
-                </div>
+                
+                <aside class="card side-card">
+                    ${createRanking(data.ranking, t)}
+                </aside>
             </div>
         </div>
     `;
