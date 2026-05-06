@@ -11,19 +11,39 @@ export const createHeader = (title) => {
     `;
 };
 
-export const createLanding = () => {
+export const createLanguageSelector = (currentLang) => {
+    const langs = [
+        { code: 'es', name: 'Castellano', flag: '🇪🇸' },
+        { code: 'ca', name: 'Català', flag: '🇦🇩' },
+        { code: 'en', name: 'English', flag: '🇬🇧' }
+    ];
+
+    const buttons = langs.map(lang => `
+        <button class="lang-btn ${lang.code === currentLang ? 'active' : ''}" data-lang="${lang.code}">
+            <span>${lang.flag}</span> ${lang.name}
+        </button>
+    `).join('');
+
+    return `
+        <div class="language-selector">
+            ${buttons}
+        </div>
+    `;
+};
+
+export const createLanding = (t, currentLang) => {
     return `
         <div class="landing-container card">
+            ${createLanguageSelector(currentLang)}
             <div class="hero-icon">🚀</div>
-            <h2>¡Bienvenido a la Autoescuela de Sistemas!</h2>
+            <h2>${t.welcome}</h2>
             <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6;">
-                La plataforma definitiva para dominar tus exámenes de sistemas informáticos. 
-                Hardware, Redes, Linux y más, con tests interactivos diseñados para tu éxito.
+                ${t.desc}
             </p>
             <div style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
-                <button id="start-app-btn" class="btn-primary">Entrar a los Exámenes</button>
+                <button id="start-app-btn" class="btn-primary">${t.start}</button>
                 <p style="text-align: center; font-size: 0.75rem; color: var(--text-muted);">
-                    Prepárate para el futuro de la informática.
+                    ${t.footer}
                 </p>
             </div>
         </div>
@@ -33,7 +53,7 @@ export const createLanding = () => {
 /**
  * Crea el Menú Principal con selección de exámenes
  */
-export const createMenu = (data) => {
+export const createMenu = (data, t) => {
     const examCards = data.exams.map(exam => `
         <div class="exam-card" data-id="${exam.id}">
             <div class="exam-icon">${exam.icon}</div>
@@ -41,19 +61,19 @@ export const createMenu = (data) => {
                 <h3>${exam.title}</h3>
                 <p>${exam.description}</p>
             </div>
-            <div class="exam-meta">${exam.questions.length} Preguntas</div>
+            <div class="exam-meta">${exam.questions.length} ${t.questions_count}</div>
         </div>
     `).join('');
 
     return `
         <div class="menu-container">
             <div class="card main-card">
-                <h2>Elige tu desafío</h2>
-                <p class="question-text">Selecciona un examen para comenzar o revisa tu historial.</p>
+                <h2>${t.choose}</h2>
+                <p class="question-text">${t.choose_desc}</p>
                 <div class="exams-grid">
                     ${examCards}
                 </div>
-                <button id="view-history-btn" class="btn-secondary">📜 Ver Historial de Exámenes</button>
+                <button id="view-history-btn" class="btn-secondary">${t.history_btn}</button>
             </div>
         </div>
     `;
