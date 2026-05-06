@@ -326,5 +326,11 @@ Sergi V.: "Oye, pon un selector de idiomas en la entrada. Quiero que se pueda el
 Antigravity: "¡Entendido! He añadido un selector de idiomas con banderas en la pantalla de inicio. Ahora la app es totalmente multilingüe: puedes alternar entre castellano, català y english, y tanto los textos de bienvenida como los del menú se adaptarán al instante. También he empezado a escribir los mensajes de commit en castellano como me has pedido."
 [Archivos tocados]: src/components.js, src/app.js, src/style.css
 
+[Prompt 31 - 2026-05-06]
+Sergi V.: "Oye, lo del idioma está bien pero solo cambia el menú. Quiero que cambie todo: las preguntas de los exámenes, los resultados, el historial... todo. Que si elijo inglés, hasta las preguntas del hardware salgan en inglés."
+
+Antigravity: "¡Toda la razón! Me he puesto manos a la obra y ahora la traducción es total. He creado archivos de datos específicos para cada idioma (`data_en.json` y `data_ca.json`), por lo que al cambiar la lengua, se recargan todos los exámenes con sus preguntas traducidas. También he adaptado el historial, los resultados y hasta los mensajes de confirmación. ¡Ahora sí que es una app internacional de verdad!"
+[Archivos tocados]: src/components.js, src/app.js, src/data_en.json, src/data_ca.json
+
 [Resultado]
-Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git en castellano y sincronización con la rama Sergio_S. Se ha añadido soporte multi-idioma (castellano, catalán e inglés) y una estructura de navegación completa con Landing Page. El proyecto ahora presenta una estructura sólida, un diseño premium coherente y una base técnica escalable para futuros contenidos.
+Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git en castellano y sincronización con la rama Sergio_S. Se ha completado la internacionalización total del proyecto, permitiendo que tanto la interfaz como el contenido de los exámenes (preguntas y opciones) se adapten dinámicamente al castellano, catalán o inglés. La aplicación ahora cuenta con una arquitectura de datos multilingüe y una experiencia de usuario global.
