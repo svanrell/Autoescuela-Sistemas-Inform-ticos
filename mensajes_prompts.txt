@@ -350,5 +350,11 @@ Sergio S.: "Oye, mete en el menú principal un ranking de gente que mejor lo ha 
 Antigravity: "¡Me encanta la idea competitiva! He añadido una sección de 'Ranking de Estudiantes' en una columna lateral de la pantalla de bienvenida. He creado un archivo `ranking.json` con algunos ganadores ficticios (y te he incluido a ti, por supuesto). El diseño resalta al número 1 con un toque dorado para que se note quién manda desde el primer momento. ¡Ahora ya tienes un leaderboard en la entrada!"
 [Archivos tocados]: src/ranking.json, src/components.js, src/app.js, src/style.css
 
+[Prompt 35 - 2026-05-06]
+Sergio S.: "No me gusta cómo queda el ranking al lado de los idiomas. Cámbialo para que esté debajo del cuadro principal de bienvenida, en su propio bloque."
+
+Antigravity: "¡Entendido! Tienes razón, así queda mucho más equilibrado. He movido el ranking debajo del panel de bienvenida. Ahora el ranking se adapta a todo el ancho y las tarjetas de los alumnos se organizan automáticamente en una cuadrícula. Se ve mucho más limpio y profesional."
+[Archivos tocados]: src/components.js, src/style.css
+
 [Resultado]
-Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git en castellano y sincronización con la rama Sergio_S. Se ha añadido un sistema de clasificación (Ranking) dinámico que fomenta la interactividad, además de completar la internacionalización y navegación del proyecto. La aplicación ahora presenta un ecosistema completo para el estudio, con historial, leaderboard y soporte multi-idioma bajo una estética premium.
+Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git en castellano y sincronización con la rama Sergio_S. Se ha rediseñado la estructura de la Landing Page para presentar el ranking de estudiantes en un bloque inferior con disposición en cuadrícula adaptable, optimizando el equilibrio visual y la experiencia de navegación multilingüe.
