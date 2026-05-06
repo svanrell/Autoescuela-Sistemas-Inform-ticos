@@ -133,6 +133,24 @@ h1 {
     }
 }
 
+.landing-page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ranking-card-full {
+    width: 100%;
+}
+
+.ranking-card-full .ranking-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+
 .ranking-list {
     display: flex;
     flex-direction: column;

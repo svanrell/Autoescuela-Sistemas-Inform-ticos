@@ -33,7 +33,7 @@ export const createLanguageSelector = (currentLang) => {
 
 export const createLanding = (t, currentLang, rankingData) => {
     return `
-        <div class="landing-container dashboard-grid">
+        <div class="landing-page-container">
             <div class="card landing-main">
                 ${createLanguageSelector(currentLang)}
                 <div class="hero-icon">🚀</div>
@@ -49,9 +49,9 @@ export const createLanding = (t, currentLang, rankingData) => {
                 </div>
             </div>
 
-            <aside class="card side-card">
+            <div class="card ranking-card-full">
                 ${createRanking(rankingData, t)}
-            </aside>
+            </div>
         </div>
     `;
 };
