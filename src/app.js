@@ -10,7 +10,7 @@ const state = {
     currentIndex: 0,
     score: 0,
     isAnswered: false,
-    view: 'menu', // 'menu', 'test', 'results', 'history'
+    view: 'home', // 'home', 'menu', 'test', 'results', 'history'
     history: JSON.parse(localStorage.getItem('examHistory') || '[]')
 };
 
@@ -31,6 +31,10 @@ function render() {
     appContainer.innerHTML = components.createHeader("Sistemas Pro");
 
     switch (state.view) {
+        case 'home':
+            appContainer.innerHTML += components.createLanding();
+            setupLandingListeners();
+            break;
         case 'menu':
             appContainer.innerHTML += components.createMenu({ exams: state.allExams });
             setupMenuListeners();
@@ -46,6 +50,13 @@ function render() {
             setupHistoryListeners();
             break;
     }
+}
+
+function setupLandingListeners() {
+    document.getElementById('start-app-btn').addEventListener('click', () => {
+        state.view = 'menu';
+        render();
+    });
 }
 
 function setupMenuListeners() {
