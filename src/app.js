@@ -9,6 +9,7 @@ const state = {
     ranking: [],
     currentExam: null,
     currentIndex: 0,
+    userAnswers: [],
     score: 0,
     isAnswered: false,
     view: 'home', // 'home', 'menu', 'test', 'results', 'history'
@@ -30,6 +31,8 @@ const translations = {
         back_menu: "Finalizar y Volver",
         exit_label: "Salir",
         back_home: "Volver al Inicio",
+        prev_label: "Pregunta Anterior",
+        next_label: "Siguiente Pregunta",
         question_label: "Pregunta",
         of: "de",
         exit_title: "Salir del examen",
@@ -53,6 +56,8 @@ const translations = {
         back_menu: "Finalitzar i Tornar",
         exit_label: "Sortir",
         back_home: "Tornar a l'Inici",
+        prev_label: "Pregunta Anterior",
+        next_label: "Següent Pregunta",
         question_label: "Pregunta",
         of: "de",
         exit_title: "Sortir de l'examen",
@@ -76,6 +81,8 @@ const translations = {
         back_menu: "Finish and Return",
         exit_label: "Exit",
         back_home: "Back to Home",
+        prev_label: "Previous Question",
+        next_label: "Next Question",
         question_label: "Question",
         of: "of",
         exit_title: "Exit exam",
@@ -159,6 +166,7 @@ function setupMenuListeners() {
             const examId = card.dataset.id;
             state.currentExam = state.allExams.find(e => e.id === examId);
             state.currentIndex = 0;
+            state.userAnswers = new Array(state.currentExam.questions.length).fill(null);
             state.score = 0;
             state.view = 'test';
             render();
@@ -180,15 +188,33 @@ function setupMenuListeners() {
 
 function renderTest() {
     const t = translations[state.lang];
-    const { currentExam, currentIndex } = state;
+    const { currentExam, currentIndex, userAnswers } = state;
     const question = currentExam.questions[currentIndex];
+    const selectedAnswer = userAnswers[currentIndex];
     
     appContainer.innerHTML += components.createProgressBar(currentIndex, currentExam.questions.length, t);
-    appContainer.innerHTML += components.createQuestionCard(question, t);
+    appContainer.innerHTML += components.createQuestionCard(question, t, selectedAnswer, currentIndex === 0);
 
     document.querySelectorAll('.option-btn').forEach(btn => {
         btn.addEventListener('click', handleAnswer);
     });
+
+    if (currentIndex > 0) {
+        document.getElementById('prev-question-btn').addEventListener('click', () => {
+            state.currentIndex--;
+            render();
+        });
+    }
+
+    if (selectedAnswer !== null) {
+        document.getElementById('next-question-btn').addEventListener('click', () => {
+            state.currentIndex++;
+            if (state.currentIndex >= state.currentExam.questions.length) {
+                state.view = 'results';
+            }
+            render();
+        });
+    }
 
     document.getElementById('exit-exam-btn').addEventListener('click', () => {
         if (confirm(translations[state.lang].confirm_exit)) {
@@ -199,12 +225,13 @@ function renderTest() {
 }
 
 function handleAnswer(event) {
-    if (state.isAnswered) return;
+    if (state.userAnswers[state.currentIndex] !== null) return;
     
-    state.isAnswered = true;
     const btn = event.currentTarget;
     const selected = parseInt(btn.dataset.index);
     const correct = state.currentExam.questions[state.currentIndex].correct;
+
+    state.userAnswers[state.currentIndex] = selected;
 
     if (selected === correct) {
         state.score++;

@@ -122,19 +122,34 @@ export const createProgressBar = (current, total, t) => {
     `;
 };
 
-export const createQuestionCard = (questionData, t) => {
-    const { question, options, category } = questionData;
-    const optionsHTML = options.map((option, index) => `
-        <button class="option-btn" data-index="${index}">
-            <span class="option-letter">${String.fromCharCode(65 + index)}</span>
-            <span class="option-text">${option}</span>
-        </button>
-    `).join('');
+export const createQuestionCard = (questionData, t, selectedAnswer = null, isFirst = true) => {
+    const { question, options, category, correct } = questionData;
+    const isAlreadyAnswered = selectedAnswer !== null;
+
+    const optionsHTML = options.map((option, index) => {
+        let className = 'option-btn';
+        if (isAlreadyAnswered) {
+            if (index === correct) className += ' correct';
+            else if (index === selectedAnswer) className += ' incorrect';
+            else className += ' disabled';
+        }
+
+        return `
+            <button class="${className}" data-index="${index}" ${isAlreadyAnswered ? 'disabled' : ''}>
+                <span class="option-letter">${String.fromCharCode(65 + index)}</span>
+                <span class="option-text">${option}</span>
+            </button>
+        `;
+    }).join('');
 
     return `
         <article class="card">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                <div class="category-badge">${category}</div>
+                <div style="display: flex; gap: 0.75rem; align-items: center;">
+                    ${!isFirst ? `<button id="prev-question-btn" class="btn-icon" title="${t.prev_label}">⬅</button>` : ''}
+                    <div class="category-badge">${category}</div>
+                    ${isAlreadyAnswered ? `<button id="next-question-btn" class="btn-icon" title="${t.next_label}">➡</button>` : ''}
+                </div>
                 <button id="exit-exam-btn" class="btn-exit" title="${t.exit_title}">
                     <span class="exit-icon">🚪</span>
                     <span class="exit-text">${t.exit_label}</span>
