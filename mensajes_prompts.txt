@@ -370,5 +370,11 @@ Sergio S.: "Oye, revisa los archivos .md y las instrucciones para ver si falta a
 Antigravity: "¡Revisión completada! He actualizado el `README.md`, el `progress.md` y el `activeContext.md` para reflejar todas las novedades (idiomas, ranking, navegación). Además, he ampliado el banco de preguntas a 8 por categoría en los tres idiomas para que los exámenes sean más 'masivos' y completos. Ahora el proyecto cumple con creces todas las especificaciones y objetivos marcados."
 [Archivos tocados]: README.md, memory-bank/*.md, src/data*.json
 
+[Prompt 40 - 2026-05-06]
+Sergio S.: "En el menú principal donde pone bienvenidos no está centrada. Quiero que centres el texto."
+
+Antigravity: "¡Toda la razón! Quedaba un poco desplazado hacia la izquierda. He añadido estilos específicos para la tarjeta de bienvenida (`.landing-main`) para centrar tanto el título como la descripción y el selector de idiomas. Ahora todo el bloque frontal está perfectamente alineado."
+[Archivos tocados]: src/style.css
+
 [Resultado]
-Finalización integral del proyecto con una revisión exhaustiva de la documentación técnica y una expansión masiva del banco de preguntas en todos los idiomas soportados. La aplicación ahora presenta un estado de madurez total, con características de navegación avanzada, internacionalización completa y un sistema de gamificación (ranking) que supera los requisitos iniciales. El ecosistema está listo para su despliegue y uso educativo.
+Finalización integral del proyecto con una revisión exhaustiva de la documentación técnica y una expansión masiva del banco de preguntas en todos los idiomas soportados. Se han realizado ajustes finales de alineación visual en la Landing Page, asegurando un diseño simétrico y profesional. El sistema de navegación avanzada y el leaderboard dinámico complementan una experiencia de usuario robusta y premium.
