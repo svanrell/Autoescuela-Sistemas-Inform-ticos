@@ -345,9 +345,9 @@ Antigravity: "¡Buena idea! He añadido un botón de 'Volver al Inicio' justo al
 [Archivos tocados]: src/components.js, src/app.js
 
 [Prompt 34 - 2026-05-06]
-Sergio S.: "Oye, mete en el menú principal un ranking de gente que mejor lo ha hecho. Puedes inventarte algunos nombres y guardarlos en un json para que salgan ahí al lado de los exámenes. Que se vea quién es el crack de la clase."
+Sergio S.: "Oye, mete en el menú principal un ranking de gente que mejor lo ha hecho. Puedes inventarte algunos nombres y guardarlos en un json para que salgan ahí al lado del selector de idiomas. Que se vea quién es el crack de la clase nada más entrar."
 
-Antigravity: "¡Me encanta la idea competitiva! He añadido una sección de 'Ranking de Estudiantes' en una columna lateral del menú principal. He creado un archivo `ranking.json` con algunos ganadores ficticios (y te he incluido a ti, por supuesto). El diseño resalta al número 1 con un toque dorado para que se note quién manda. ¡Ahora ya tienes un leaderboard en toda regla!"
+Antigravity: "¡Me encanta la idea competitiva! He añadido una sección de 'Ranking de Estudiantes' en una columna lateral de la pantalla de bienvenida. He creado un archivo `ranking.json` con algunos ganadores ficticios (y te he incluido a ti, por supuesto). El diseño resalta al número 1 con un toque dorado para que se note quién manda desde el primer momento. ¡Ahora ya tienes un leaderboard en la entrada!"
 [Archivos tocados]: src/ranking.json, src/components.js, src/app.js, src/style.css
 
 [Resultado]

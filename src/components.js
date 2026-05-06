@@ -31,21 +31,27 @@ export const createLanguageSelector = (currentLang) => {
     `;
 };
 
-export const createLanding = (t, currentLang) => {
+export const createLanding = (t, currentLang, rankingData) => {
     return `
-        <div class="landing-container card">
-            ${createLanguageSelector(currentLang)}
-            <div class="hero-icon">🚀</div>
-            <h2>${t.welcome}</h2>
-            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6;">
-                ${t.desc}
-            </p>
-            <div style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
-                <button id="start-app-btn" class="btn-primary">${t.start}</button>
-                <p style="text-align: center; font-size: 0.75rem; color: var(--text-muted);">
-                    ${t.footer}
+        <div class="landing-container dashboard-grid">
+            <div class="card landing-main">
+                ${createLanguageSelector(currentLang)}
+                <div class="hero-icon">🚀</div>
+                <h2>${t.welcome}</h2>
+                <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6;">
+                    ${t.desc}
                 </p>
+                <div style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
+                    <button id="start-app-btn" class="btn-primary">${t.start}</button>
+                    <p style="text-align: center; font-size: 0.75rem; color: var(--text-muted);">
+                        ${t.footer}
+                    </p>
+                </div>
             </div>
+
+            <aside class="card side-card">
+                ${createRanking(rankingData, t)}
+            </aside>
         </div>
     `;
 };
@@ -88,22 +94,16 @@ export const createMenu = (data, t) => {
 
     return `
         <div class="menu-container">
-            <div class="dashboard-grid">
-                <div class="card main-card">
-                    <h2>${t.choose}</h2>
-                    <p class="question-text">${t.choose_desc}</p>
-                    <div class="exams-grid">
-                        ${examCards}
-                    </div>
-                    <div class="menu-actions" style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
-                        <button id="view-history-btn" class="btn-secondary" style="flex: 1; min-width: 200px;">${t.history_btn}</button>
-                        <button id="back-home-btn" class="btn-secondary" style="flex: 1; min-width: 200px;">🏠 ${t.back_home}</button>
-                    </div>
+            <div class="card main-card">
+                <h2>${t.choose}</h2>
+                <p class="question-text">${t.choose_desc}</p>
+                <div class="exams-grid">
+                    ${examCards}
                 </div>
-                
-                <aside class="card side-card">
-                    ${createRanking(data.ranking, t)}
-                </aside>
+                <div class="menu-actions" style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+                    <button id="view-history-btn" class="btn-secondary" style="flex: 1; min-width: 200px;">${t.history_btn}</button>
+                    <button id="back-home-btn" class="btn-secondary" style="flex: 1; min-width: 200px;">🏠 ${t.back_home}</button>
+                </div>
             </div>
         </div>
     `;

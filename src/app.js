@@ -114,13 +114,12 @@ function render() {
 
     switch (state.view) {
         case 'home':
-            appContainer.innerHTML += components.createLanding(t, state.lang);
+            appContainer.innerHTML += components.createLanding(t, state.lang, state.ranking);
             setupLandingListeners();
             break;
         case 'menu':
             appContainer.innerHTML += components.createMenu({ 
-                exams: state.allExams, 
-                ranking: state.ranking 
+                exams: state.allExams
             }, t);
             setupMenuListeners();
             break;
