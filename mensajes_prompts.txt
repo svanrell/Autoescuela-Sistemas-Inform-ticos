@@ -297,15 +297,15 @@ Antigravity: "¡Enhorabuena por llegar hasta aquí, Sergi! Te recomiendo Netlify
 [Archivos tocados]: (Preparación para despliegue, ajustes de rutas relativas)
 
 [Prompt 26 - 2026-05-06]
-Sergi V.: "Oye Antigravity, he estado probando la web y aunque se ve de lujo, he notado que las tarjetas de los exámenes están un poco pegadas. Además, el efecto de hover a veces hace que parezca que una tarjeta se mete debajo de la otra y queda un poco raro. ¿Me podrías ayudar a darle más 'aire' a todo? Me gustaría que hubiera más espacio entre los apartados y que cuando pase el ratón por encima, la tarjeta que se mueve se vea claramente por encima de las demás sin ensuciar el diseño. Quiero que la experiencia sea súper fluida y profesional."
+Sergi V.: "Oye, las tarjetas de los exámenes están un poco pegadas y al pasar el ratón parece que se amontonan unas encima de otras. ¿Podemos darles más espacio y que se note bien cuál estamos seleccionando? Quiero que se vea más limpio."
 
-Antigravity: "¡Toda la razón, Sergi! En el diseño UI/UX, el 'espacio negativo' o aire es fundamental para que el usuario no se sienta agobiado. Para solucionarlo, vamos a aumentar el `gap` de la rejilla y los márgenes de los botones. Además, usaremos la propiedad `z-index` en el estado hover para que la tarjeta seleccionada 'flote' sobre el resto, dándole una jerarquía visual clara. Esto hará que la navegación se sienta mucho más limpia y moderna."
+Antigravity: "¡Claro! Vamos a darle más aire al diseño. Aumentaremos el espacio entre las tarjetas y usaremos el `z-index` para que la que tengas seleccionada resalte sobre las demás sin molestar. Verás que así queda mucho más ordenado."
 [Archivos tocados]: src/style.css
 
 [Prompt 27 - 2026-05-06]
-Sergi V.: "Mejor mucho con lo que hemos hecho, pero he visto un detalle: al elevarse la tarjeta en el hover, el borde de arriba casi tapa el mensaje de 'Selecciona un examen...'. ¿Podemos bajar un poco la rejilla para que no se choquen? Y lo más importante, ya he vinculado mi cuenta de GitHub con la extensión que me dijiste. ¿Podrías subir todos estos cambios a mi rama de Sergio_S? Quiero tener el repositorio al día con estas mejoras de diseño."
+Sergi V.: "Aún se queda un poco cerca del texto de arriba cuando haces el hover y parece que lo tapa. Sepáralo un poco más. También, ya he puesto lo de GitHub, así que súbelo todo a mi rama de Sergio_S para tenerlo ya guardado allí."
 
-Antigravity: "¡Buen ojo! Esos pequeños detalles de colisión son los que separan una web normal de una premium. Añadiremos un `margin-top` extra a la sección de exámenes para que tengan su propio espacio vital. Respecto a GitHub, ahora que tenemos la conexión lista, inicializaré el repositorio y subiré todo a tu rama `Sergio_S`. Es genial ver cómo ya estás manejando el flujo de trabajo profesional, desde el diseño visual hasta el control de versiones."
+Antigravity: "Entendido. Le daré un margen extra arriba para que no choque con el texto. También me encargo de subirlo todo a tu rama `Sergio_S` ahora mismo para que tengas la versión más reciente en la nube."
 [Archivos tocados]: src/style.css, (Operaciones de Git)
 
 [Resultado]
