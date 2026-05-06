@@ -358,5 +358,11 @@ Antigravity: "¡Te cuento cómo está montado el sistema! Actualmente, el rankin
 Técnicamente, el sistema es funcional para *mostrar* datos: la aplicación hace un `fetch` a ese JSON al cargar y lo dibuja en pantalla. Sin embargo, como estamos en una aplicación de solo 'front-end' (sin base de datos real detrás), las puntuaciones que tú sacas en los exámenes se guardan en tu `localStorage` (tu historial personal), pero no se suben automáticamente al ranking global de `ranking.json`. Para que fuera un ranking real compartido con otros alumnos, necesitaríamos un pequeño servidor o una base de datos (como Firebase) para centralizar los datos de todos. ¡Pero como base visual y funcional de lectura, está 100% operativo!"
 [Archivos tocados]: mensajes_prompts.txt
 
+[Prompt 38 - 2026-05-06]
+Sergio S.: "Oye, había un error en el código y no cargaba bien. Además, cuando volvía atrás no podía avanzar otra vez si ya había respondido. Arréglalo para que pueda moverme hacia adelante y hacia atrás tranquilamente una vez contestado."
+
+Antigravity: "¡Mil disculpas, Sergio! Se me había escapado una llave en el código y eso rompía la app. Ya lo he arreglado. Además, he añadido el botón de 'Siguiente' (➡) que aparece cuando revisas preguntas ya contestadas, para que puedas moverte en ambas direcciones sin problemas. ¡Ahora la navegación es fluida al 100%!"
+[Archivos tocados]: src/app.js, src/components.js
+
 [Resultado]
-Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git en castellano y sincronización con la rama Sergio_S. Se ha integrado un sistema de ranking visual mediante carga de datos JSON externos, complementando la internacionalización y las mejoras de navegación. La documentación técnica ha sido actualizada para aclarar el funcionamiento del sistema de persistencia y la naturaleza de los datos del leaderboard.
+Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git en castellano y sincronización con la rama Sergio_S. Se han corregido errores de sintaxis en la lógica del estado y se ha perfeccionado el sistema de navegación de los exámenes, añadiendo soporte para avanzar (Next) en preguntas ya respondidas. El flujo de usuario es ahora completamente bidireccional y robusto.
