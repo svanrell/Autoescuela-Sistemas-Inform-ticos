@@ -1,0 +1,49 @@
+
+
+prompt 1:
+Basado en la especificación specs/inicial.md y siguiendo las reglas de .antigravity/rules.md, 
+genera el código para src/components.js.
+
+
+
+
+2 Siguiente interaccion IA:
+
+¿Necesitas que proceda con la creación de los otros archivos mencionados en las especificaciones 
+(app.js o index.html)?
+
+Sí,  por favor
+
+
+
+
+
+
+3 Siguiente interacción IA:
+
+¿Qué te parece esta estructura de proyecto? 
+¿Crees que los alumnos tendrán claro por qué hemos separado las reglas (.antigravity) de la especificación (specs)? 🤔
+
+Es una excelente pregunta para que los alumnos entiendan que en el desarrollo profesional 
+"el orden de los factores sí altera el producto".
+
+Separar las reglas de la especificación es fundamental por tres razones principales:
+
+Las Reglas (.antigravity/rules.md) son la "Constitución" :
+Definen el estilo y la calidad técnica. No cambian de un ejercicio a otro. 
+Por ejemplo, "siempre usar funciones puras" es una norma que queremos mantener 
+en todo el curso para asegurar que el código sea mantenible.
+
+La Especificación (specs/inicial.md) es el "Plano" :
+Define qué estamos construyendo hoy (una navbar, una lista de tareas, un chat). 
+Cambia con cada nuevo reto o funcionalidad.
+
+
+Independencia de Tareas :
+Si un alumno quiere cambiar lo que hace la app (la Spec), 
+no debería tener que volver a explicarle a la IA que quiere código modular (las Reglas). 
+La IA ya conoce las reglas del juego y solo necesita saber qué pieza nueva debe fabricar.
+
+
+Ahora pueden ir escribiendo prompts para ir agregando otros diseños a los componentes.
+(Y otros nuevos componentes también)

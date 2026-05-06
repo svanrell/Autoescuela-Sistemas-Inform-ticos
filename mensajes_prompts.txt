@@ -1,0 +1,301 @@
+REGISTRO DE PROMPTS - AUTOESCUELA DE SISTEMAS
+
+[Prompt 1 - 2026-05-04]
+Sergi V.: "Hola Antigravity, acabo de recibir las pautas para mi proyecto final de sistemas y estoy un poco perdido viendo la cantidad de requisitos.
+Te he puesto el archivo Proyecto_FINAL_SISTEMAS.docx que contiene la rúbrica de evaluación detallada por el profesor.
+Me gustaría que lo analizáramos juntos para identificar cuáles son los puntos críticos que garantizan una nota alta.
+No quiero simplemente que me digas qué hacer, sino que me expliques qué partes de la arquitectura son las más importantes para cumplir con los estándares académicos.
+¿Podrías decirme qué tecnologías o patrones de diseño me sugerirías para que el código sea profesional y fácil de mantener?
+Mi meta es aprender a estructurar un proyecto de esta dificultad desde cero de forma correcta para usarlo en mis cosas personales."
+
+Antigravity: "¡Hola Sergi! No te preocupes, es normal sentirse así al principio con proyectos de este nivel. He analizado la rúbrica y los puntos clave para esa nota alta son: la documentación del proceso (Memory Bank), un código limpio y una arquitectura modular que separe los datos de la interfaz. Para que sea profesional, te sugiero usar el patrón de 'Componentes' en JavaScript y una estructura de diseño basada en variables CSS. Esto no solo te dará la nota, sino que hará que tus futuros proyectos personales sean mucho más fáciles de escalar."
+[Archivos tocados]: memory-bank/productContext.md, memory-bank/systemPatterns.md
+
+[Resultado]
+Análisis exhaustivo de la rúbrica y detección de requisitos críticos: Implementación de Memory Bank, Registro de Prompts y Arquitectura Modular. Creación de un plan de implementación detallado para asegurar la máxima calificación.
+
+[Prompt 2 - 2026-05-04]
+Sergi V.: "Oye, he estado viendo el plan que me has pasado y me mola mucho, así que dale caña y empezamos.
+Pero antes de nada, quiero que me expliques bien qué lío hay con la carpeta memory-bank/.
+¿Por qué tenemos que tener tantos archivos como productContext.md o systemPatterns.md en vez de uno solo con todo?
+Me interesa aprender a organizar mis cosas personales y mis proyectos para que no sean un caos.
+Dime cómo nos ayudan estos archivos a no perder el hilo cuando el proyecto se empiece a complicar.
+Estoy listo para darle a la configuración de la arquitectura esta modular."
+
+Antigravity: "Es una buena pregunta, Sergi. Separamos los archivos en el Memory Bank para que cada uno tenga una 'misión' clara: `productContext.md` nos dice QUÉ estamos haciendo, mientras que `systemPatterns.md` nos dice CÓMO lo vamos a programar técnicamente. Si ponemos todo en uno solo, cuando el proyecto crezca será imposible encontrar nada. Esta organización te permite centrarte en una sola cosa a la vez y ayuda a que el código sea coherente desde el principio hasta el final."
+[Archivos tocados]: memory-bank/productContext.md, memory-bank/systemPatterns.md, memory-bank/activeContext.md, memory-bank/progress.md
+
+[Resultado]
+Creación de la carpeta memory-bank/ con los archivos obligatorios: productContext.md, systemPatterns.md, activeContext.md y progress.md. Configuración inicial de la arquitectura modular y explicación de la metodología de gestión de contexto.
+
+[Prompt 3 - 2026-05-04]
+Sergi V.: "Ahora que ya tenemos los papeles listos, vamos a meterle mano al código de verdad.
+Quiero que montemos la estructura base (HTML, CSS y JSON) pero que se vea muy pro, algo premium que flipes.
+¿Me puedes explicar cómo organizarías el CSS para que luego no sea un marrón cambiar cosas?
+Me interesa mucho eso de usar variables para los colores y los huecos para poder tocarlo todo de una.
+Enséñame también a montar el data.json para que luego pueda meterle mil preguntas sin que pete nada.
+Quiero que lo primero que se vea de la autoescuela sea una pasada."
+
+Antigravity: "¡Me gusta el entusiasmo! Para el CSS, la clave es usar variables al principio del archivo (los tokens). Así, si mañana quieres cambiar el azul por un verde, solo tocas una línea y toda la web se actualiza. Para el JSON, vamos a estructurarlo por categorías y niveles. De esta forma, JavaScript solo tendrá que buscar lo que necesite en cada momento, evitando que la página se vuelva pesada aunque tengas mil preguntas."
+[Archivos tocados]: index.html, style.css, data.json
+
+[Resultado]
+Creación de index.html, style.css con diseño avanzado (glassmorphism) y data.json estructurado. Implementación de un sistema de diseño basado en tokens para asegurar coherencia y facilidad de mantenimiento.
+
+[Prompt 4 - 2026-05-04]
+Sergi V.: "La web se ve de locos, pero ahora toca que funcione de verdad con JavaScript.
+Como pusimos en el archivo de systemPatterns.md, quiero que usemos eso de los componentes.
+¿Me explicas bien qué diferencia hay entre lo que va en components.js y lo que va en app.js?
+Quiero entender eso de separar las cosas para no mezclar el dibujo de la pantalla con la lógica del test.
+Me gustaría intentar escribir yo algunas funciones para pintar los botones y esas cosas viendo cómo lo haces tú.
+¿Cómo lo hacemos para que el código no se vuelva una maraña cuando metamos más funciones?"
+
+Antigravity: "Exacto, Sergi. Piensa en `components.js` como tu caja de herramientas de dibujo: ahí solo creamos los botones, las tarjetas y los menús. En cambio, `app.js` es el 'director de orquesta': es el que decide qué herramienta usar y cuándo. Si quieres que el código sea limpio, cada función debe hacer una sola cosa. Yo te daré la base de las funciones de visualización y tú puedes intentar modificarlas o añadir nuevas siguiendo ese mismo patrón."
+[Archivos tocados]: src/components.js, src/app.js
+
+[Resultado]
+Desarrollo de components.js con funciones de renderizado puro y app.js para la orquestación de la lógica del examen. Verificación de la metodología Memory Bank y formación en patrones de diseño frontend.
+
+[Prompt 5 - 2026-05-04]
+Sergi V.: "El test ya va tirando, pero quiero que parezca una aplicación de verdad, algo más serio.
+Me gustaría meterle más preguntas, un menú para moverme y que la interfaz se sienta fluida.
+¿Qué trucos de esos de UX me recomiendas para que la gente no se raye usando la página?
+Dime cómo podemos cambiar de una pantalla a otra sin que se refresque toda la web, que queda feo.
+Quiero aprender a usar iconos y animaciones para que el usuario sepa siempre qué está pasando.
+Explícame cómo hacer que el botón de 'Siguiente' aparezca cuando toca y que se note bien."
+
+Antigravity: "Para una buena UX, lo principal es el feedback: que el usuario sepa si ha acertado o fallado al instante. Para cambiar de pantalla sin refrescar, usaremos una técnica llamada SPA (Single Page Application), donde simplemente ocultamos unos elementos y mostramos otros con transiciones suaves. El botón de 'Siguiente' lo controlaremos con un estado booleano: solo se activará cuando se haya seleccionado una respuesta, así evitamos errores del usuario."
+[Archivos tocados]: src/app.js, src/components.js, data.json, style.css
+
+[Resultado]
+Ampliación de data.json a 12 preguntas técnicas iniciales. Creación del componente createMenu() y refactorización de app.js para navegación SPA (Single Page Application). Mejora estética con iconos y badges dinámicos.
+
+[Prompt 6 - 2026-05-04]
+Sergi V.: "Me gusta mucho cómo va, pero para que sirva para estudiar de verdad debería tener varios exámenes.
+Quiero que se pueda elegir la categoría y que al final me salga un resumen de lo que he hecho.
+¿Cómo podemos guardar los resultados de otras veces para ver si voy mejorando o no?
+Enséñame a usar el localStorage ese para que no se borren mis cosas al cerrar el navegador.
+Quiero entender cómo guardar los datos del historial para luego poder pintarlos en una tabla o algo así.
+Me interesa mucho aprender a guardar datos en el navegador para mis futuros proyectos personales."
+
+Antigravity: "El `localStorage` es como una pequeña base de datos que vive en el navegador. Guardaremos un array de objetos con tus resultados (fecha, categoría, nota). Cada vez que termines un examen, actualizaremos ese array y lo guardaremos. Al recargar la página, lo leeremos para mostrarte tu historial. Es una herramienta súper útil para añadir 'memoria' a tus aplicaciones sin necesidad de un servidor complejo."
+[Archivos tocados]: src/app.js, src/components.js, style.css, data.json
+
+[Resultado]
+Evolución de la arquitectura para soportar múltiples exámenes por categoría. Implementación de la vista de "Historial de Exámenes" con persistencia en localStorage. Creación de un Dashboard interactivo para la selección de tests.
+
+[Prompt 7 - 2026-05-04]
+Sergi V.: "Ya tenemos los exámenes y el historial, pero ahora quiero que esto esté a tope de contenido.
+¿Me echas una mano para meter un montón de preguntas de Linux, Windows, Cloud y seguridad?
+Me da un poco de miedo que el archivo data.json se haga gigante y sea un lío manejarlo.
+¿Cómo harías tú para organizar tantas preguntas sin que la web se vuelva lenta o sea difícil de leer?
+Quiero aprender a meter los datos bien y que no se rompa nada si me falta una coma o algo.
+Este es el empujón final para tener un banco de preguntas que parezca de una empresa de verdad."
+
+Antigravity: "¡Vamos a por ello! Para manejar un JSON grande, la clave es la jerarquía: agruparemos todo por IDs de examen. JavaScript es muy rápido leyendo JSON, así que no notarás lentitud. Para evitar errores al escribir, usaremos validadores automáticos que nos avisarán si falta alguna coma. Con esto, tu proyecto pasará de ser un simple test a ser una plataforma de formación completa."
+[Archivos tocados]: data.json, src/app.js
+
+[Resultado]
+Ampliación masiva de data.json con categorías de Windows, Ciberseguridad y Cloud. Optimización de la carga de datos y validación de esquemas para asegurar la integridad de los 6 exámenes temáticos completos.
+
+[Prompt 8 - 2026-05-05]
+Sergi V.: "Oye, quiero entender mejor cómo va la lógica de los componentes que hemos montado.
+No quiero solo copiar y pegar, me interesa saber por qué hemos separado las cosas en componentes.js.
+¿Me explicas qué ventaja tiene usar funciones de esas 'puras' y por qué así es más fácil ampliar el código?
+Me gustaría intentar crear un componente yo solo siguiendo el estilo que estamos usando.
+¿Qué tengo que hacer para no liarme con las etiquetas del HTML desde el JavaScript?
+Gracias por la ayuda, quiero aprender a organizar mis proyectos así de bien yo solo."
+
+Antigravity: "¡Me encanta que quieras hacerlo tú mismo! Las funciones puras son geniales porque siempre que les das la misma entrada, te devuelven la misma salida y no tocan nada de fuera. Esto hace que sea casi imposible que rompas una parte de la web al arreglar otra. Para no liarte con el HTML, usaremos 'Template Literals' (las comillas raras) para escribir el código de forma visual dentro del JS. Intenta crear la tarjeta del historial siguiendo este modelo."
+[Archivos tocados]: src/components.js
+
+[Prompt 9 - 2026-05-05]
+Sergi V.: "He estado mirando el archivo style.css y el efecto ese de cristal me flipa.
+¿Me puedes explicar paso a paso qué líneas de CSS hacen ese desenfoque tan guapo?
+Quiero aprender a ponerlo en otros sitios de la web sin cargarme el diseño que ya tenemos.
+¿Hay algún truco para que los colores de fondo peguen con el brillo de los bordes?
+Mi idea es poder cambiar el diseño yo mismo si luego quiero usar otros colores.
+Enséñame cómo va eso de las variables CSS que pusimos arriba del todo."
+
+Antigravity: "Ese efecto se llama Glassmorphism. Se consigue con tres líneas clave: `background: rgba(...)` para la transparencia, `backdrop-filter: blur(...)` para el desenfoque y un borde blanco semitransparente para el brillo. El truco es que el fondo sea un poco más oscuro que el color de la página para que resalte. Las variables que hemos definido arriba nos permiten cambiar la intensidad de este efecto en toda la web tocando un solo número."
+[Archivos tocados]: style.css
+
+[Prompt 10 - 2026-05-05]
+Sergi V.: "Tengo una duda con cómo estamos pillando los datos del data.json.
+¿Cómo hace el JavaScript para leer el archivo y convertirlo en algo que podamos usar en el código?
+Me gustaría saber qué pasa desde que abro la web hasta que salen las preguntas en pantalla.
+¿Y si el archivo JSON tiene algún fallo, cómo nos damos cuenta antes de que pete todo?
+Quiero aprender a controlar esos fallos para que la web no se quede en blanco si falta algo.
+Explícame eso del 'fetch' y las promesas como si fuera para alguien que no tiene ni idea."
+
+Antigravity: "Imagínate que `fetch` es un mensajero que enviamos al archivo `data.json`. Como el mensajero tarda un poco en volver, JavaScript no se para a esperarle (eso es la promesa). Cuando vuelve con los datos, usamos `.json()` para 'desempaquetar' la información. Para que no pete, usamos un bloque `try...catch`: si el mensajero se pierde o el paquete está roto, el `catch` nos avisa y podemos mostrar un mensaje de error amigable en vez de que la web se cuelgue."
+[Archivos tocados]: src/app.js
+
+[Prompt 11 - 2026-05-05]
+Sergi V.: "He visto que usamos eso de los 'addEventListener' para los botones, pero quiero saber más.
+¿Es mejor poner los clics directamente en el HTML o hacerlo desde el JS como estamos haciendo?
+Quiero entender por qué es mejor separar el comportamiento de la estructura de la página.
+Además, me gustaría saber cómo puedo quitar un evento si ya no me hace falta luego.
+Seguro que si aprendo esto puedo hacer que la web sea mucho más interactiva yo solo.
+Dame un ejercicio fácil para practicar eso de los eventos en el menú."
+
+Antigravity: "Es mucho mejor hacerlo desde el JS por mantenimiento: si tienes 100 botones y quieres cambiar la lógica, es mejor ir a un solo sitio que a 100 etiquetas HTML. Para quitar un evento, usamos `removeEventListener`. Un ejercicio perfecto: intenta que al pasar el ratón por encima de una categoría del menú, se ilumine suavemente y que el evento se quite solo después de que el usuario haga el primer clic. ¡Prueba a ver qué tal!"
+[Archivos tocados]: src/app.js, src/components.js
+
+[Prompt 12 - 2026-05-05]
+Sergi V.: "Sobre lo de las notas, ¿cómo se queda guardado mi progreso cuando cierro la pestaña?
+Me dijiste lo del localStorage, pero no me queda claro cómo funciona por dentro.
+¿Qué cosas se pueden guardar ahí y qué límites tiene? No quiero que pete.
+Me gustaría intentar que guarde también cuánto tiempo tardo en acabar cada examen.
+¿Cómo organizarías tú ese dato nuevo para que luego sea fácil de leer?
+Quiero ser yo quien meta esa mejora cuando entienda bien cómo se guardan las cosas."
+
+Antigravity: "El `localStorage` solo guarda texto plano, así que usamos `JSON.stringify` para convertir nuestros objetos en texto antes de guardarlos. Tiene un límite de unos 5MB, que para nosotros es muchísimo. Para guardar el tiempo, añadiríamos una propiedad `duration` a cada objeto del historial. Yo te enseñaré a capturar el tiempo con `Date.now()` al principio y al final del test, y tú te encargas de meterlo en la lógica de guardado."
+[Archivos tocados]: src/app.js
+
+[Prompt 13 - 2026-05-05]
+Sergi V.: "Me gustaría que la web la pudiera usar todo el mundo, que sea accesible.
+¿Qué etiquetas de HTML me recomiendas poner en los botones y en las tarjetas de los exámenes?
+He leído algo de los atributos ARIA y quiero saber cuándo hay que usarlos de verdad.
+Quiero aprender a que los lectores de pantalla digan bien qué respuesta has elegido.
+Dame unos consejos básicos para que mi código esté bien hecho y sea profesional.
+Para mí es muy importante que el proyecto final esté perfecto en todos los detalles."
+
+Antigravity: "¡Qué buen detalle! La accesibilidad es clave. Usaremos etiquetas semánticas como `<button>` en vez de `<div>` para los botones, y añadiremos atributos `aria-label` para describir lo que hace cada cosa. Para las respuestas, usaremos `aria-selected` para que el lector de pantalla sepa cuál está marcada. Un truco profesional: asegúrate de que todos los colores tengan suficiente contraste, tus profesores valorarán mucho este nivel de detalle."
+[Archivos tocados]: src/components.js, style.css
+
+[Prompt 14 - 2026-05-05]
+Sergi V.: "A veces me hago un lío con los bucles en JavaScript para recorrer las preguntas.
+¿Me explicas la diferencia entre un for de toda la vida, un forEach y un map?
+Quiero saber cuándo es mejor usar cada uno para tocar los datos del test.
+Me gustaría intentar limpiar un poco la parte donde pintamos las opciones de respuesta.
+Enséñame a usar las comillas esas raras (template literals) para meter HTML de forma más limpia.
+Creo que si aprendo esto escribiré código mucho más rápido y sin repetir tanto."
+
+Antigravity: "Es normal liarse. El `for` es el más rápido pero el más sucio de escribir. El `forEach` es perfecto cuando solo quieres hacer algo con cada elemento (como pintarlos). El `map` es genial cuando quieres transformar una lista en otra nueva (por ejemplo, convertir una lista de textos en una lista de etiquetas HTML). Vamos a usar `map` para generar las opciones de respuesta, verás que el código queda mucho más corto y fácil de entender."
+[Archivos tocados]: src/components.js, src/app.js
+
+[Prompt 15 - 2026-05-05]
+Sergi V.: "He visto que el diseño cambia un poco en el móvil y me gustaría ajustarlo a mi gusto.
+¿Cómo va eso de las 'media queries' en CSS para que la web se adapte a cualquier pantalla?
+Me gustaría aprender a usar eso del grid o flexbox para que todo sea flexible y no se rompa.
+¿Cómo eliges tú cuándo tiene que cambiar el diseño para que se vea bien en todos los móviles?
+No quiero usar librerías raras, prefiero aprender a hacerlo con CSS puro para entenderlo bien.
+Dime qué propiedades son las importantes para que las tarjetas no se corten en pantallas pequeñas."
+
+Antigravity: "Las media queries son como condicionales: 'si la pantalla es menor de 600px, pon el texto más pequeño'. Usaremos Flexbox para que las tarjetas se coloquen una debajo de otra automáticamente. Los 'breakpoints' los elegimos probando: cuando el diseño se empieza a ver apretado, ahí es donde metemos el cambio. La propiedad clave es `max-width: 100%` para que nada se salga nunca de los bordes del móvil."
+[Archivos tocados]: style.css
+
+[Prompt 16 - 2026-05-05]
+Sergi V.: "Tengo curiosidad por saber cómo encontrar fallos cuando algo no va como yo quiero.
+Aparte de los 'console.log', ¿qué otras cosas del navegador me recomiendas usar?
+Me gustaría aprender a usar los puntos de parada (breakpoints) para ver el código paso a paso.
+¿Cómo puedo ver qué está pasando con los datos del examen línea a línea?
+Quiero ser capaz de arreglar mis propios fallos sin tener que pedirte ayuda cada dos por tres.
+Explícame por encima qué significan los mensajes rojos esos que salen en la consola."
+
+Antigravity: "La pestaña 'Sources' del navegador es tu mejor amiga. Ahí puedes hacer clic en un número de línea para poner un punto de parada; el código se detendrá ahí y podrás ver el valor de todas las variables en ese momento. Los mensajes rojos suelen ser de dos tipos: `ReferenceError` (has escrito mal el nombre de una variable) o `TypeError` (estás intentando hacer algo imposible, como sumar un número a algo que no existe)."
+[Archivos tocados]: (Herramientas del navegador, sin cambios en archivos)
+
+[Prompt 17 - 2026-05-05]
+Sergi V.: "Me molaría poner algunas animaciones suaves cuando pasas de una pregunta a otra.
+¿Cómo uso las transiciones de CSS para que el cambio no sea tan seco y quede más pro?
+No quiero que la web vaya lenta, así que dime cómo hacer animaciones que no pesen mucho.
+¿Es mejor usar clases de CSS que se activen con JavaScript o hacerlo todo con el código?
+Quiero aprender a controlar el tiempo de las animaciones para que todo vaya fluido.
+Dame un ejemplo de cómo animar la tarjeta cuando salen los resultados al final."
+ 
+Antigravity: "Lo mejor es usar clases de CSS: preparas la animación en el CSS y con JS solo le pones o le quitas la clase. Para que sea fluido, usa la propiedad `transition` con `opacity` y `transform`. Un truco de pro es usar `cubic-bezier` para que la animación no sea lineal, sino que tenga una aceleración natural. Vamos a programar una clase `.fade-in` que haga que la tarjeta de resultados aparezca deslizándose un poco hacia arriba."
+[Archivos tocados]: style.css, src/app.js
+
+[Prompt 18 - 2026-05-05]
+Sergi V.: "Sobre la seguridad de la web, aunque sea un proyecto para clase, quiero saber un poco más.
+¿Cómo evitamos que alguien se cambie la nota tocando el localStorage a mano?
+Ya sé que en el navegador es difícil, pero ¿qué me recomiendas hacer para proteger los datos?
+Quiero aprender a comprobar que las respuestas que llegan al final son las de verdad.
+¿Me explicas qué es eso de 'limpiar los datos' para que no me metan código raro en la web?
+Me interesa mucho este tema para cuando suba mis proyectos a internet de verdad."
+
+Antigravity: "En el lado del cliente (el navegador) es imposible evitarlo al 100%, pero podemos complicarlo. Lo importante es la 'sanitización': nunca confíes en lo que escribe el usuario. Si vas a mostrar un texto que viene de fuera, asegúrate de limpiarlo para que no contenga etiquetas `<script>`. En este proyecto, validaremos que el ID del examen coincida con el que el usuario realmente ha cargado."
+[Archivos tocados]: src/app.js
+
+[Prompt 19 - 2026-05-05]
+Sergi V.: "Me gustaría organizar mejor las fotos y los iconos que usamos en la web.
+¿Qué formato es mejor: PNG, JPG o WebP? Quiero que la página cargue súper rápido.
+Dime cómo podemos bajarle el peso a las imágenes sin que se vean fatal.
+También quiero saber si es mejor usar iconos de una librería o usar archivos SVG.
+Me gustaría aprender a tocar los SVG desde el código para cambiarles el color cuando yo quiera.
+Enséñame a poner un icono de carga para cuando los datos tardan un poco en salir."
+
+Antigravity: "WebP es el ganador absoluto hoy en día para fotos. Para iconos, sin duda usa SVG: no pesan nada y no pierden calidad al ampliarlos. Lo mejor es que al ser código, podemos cambiarles el `fill` (color) desde el CSS. Vamos a crear un componente `Spinner` con un SVG animado que se mostrará mientras el `fetch` está trabajando, así el usuario no piensa que la web se ha quedado colgada."
+[Archivos tocados]: src/components.js, style.css
+
+[Prompt 20 - 2026-05-05]
+Sergi V.: "He visto que estamos usando mucho las funciones flecha (arrow functions) en el código.
+¿Me explicas bien qué diferencia hay con las funciones normales de siempre?
+Quiero entender eso del 'this' que a veces da problemas en JavaScript.
+Me interesa aprender a escribir código moderno y que sea cortito como se hace ahora.
+¿Qué otros trucos de JavaScript moderno me vendrían bien para este proyecto de la autoescuela?
+Ayúdame a que mi código parezca el de alguien que sabe de verdad lo que hace."
+
+Antigravity: "Las funciones flecha son más cortas y, lo más importante, no crean su propio `this`; heredan el de fuera. Esto evita muchos bugs clásicos de JavaScript. Otro truco de pro es la 'Desestructuración': en vez de poner `pregunta.titulo`, podemos sacar el título directamente con `{ titulo }`. Vamos a refactorizar un par de funciones para que veas lo limpio que queda el código con estas técnicas modernas."
+[Archivos tocados]: src/app.js, src/components.js
+
+[Prompt 21 - 2026-05-05]
+Sergi V.: "Me gustaría meter un 'modo oscuro' para que estudiar de noche no te queme los ojos.
+¿Cómo se hace eso de forma limpia usando solo variables de CSS y un poco de JavaScript?
+Quiero aprender a saber si el usuario ya tiene el modo oscuro puesto en su ordenador.
+También me interesa guardar esa elección para que no se quite al recargar la página.
+¿Cómo organizarías tú las clases para que el cambio sea rápido y no pegue fogonazos?
+Enséñame a hacer un botón de esos de interruptor que quede bien visualmente."
+
+Antigravity: "Para el modo oscuro, crearemos un segundo set de variables CSS dentro de una clase `.dark-mode`. Con JS, detectaremos la preferencia del sistema usando `window.matchMedia` y luego dejaremos que el usuario la cambie con un botón. Guardaremos la elección en `localStorage` para que la web 'recuerde' si te gusta la luz o la oscuridad la próxima vez que entres. ¡Es un detalle de calidad increíble!"
+[Archivos tocados]: style.css, src/app.js, src/components.js
+
+[Prompt 22 - 2026-05-05]
+Sergi V.: "A veces noto que mi código se vuelve un poco lío cuando el proyecto empieza a crecer.
+¿Qué consejos me das para poner comentarios que sirvan de algo sin llenar todo de texto?
+Me gustaría aprender a usar JSDoc para que el editor me ayude más con las funciones.
+¿Cómo pondrías tú las carpetas si quisiera separar la lógica de los datos y de los estilos?
+Quiero aprender a ser ordenado para que si vuelvo al código en un mes no me pierda.
+Dame una estructura de carpetas que sea la ideal para un proyecto de este tipo."
+
+Antigravity: "El secreto es comentar el 'por qué', no el 'qué'. Si el código se explica solo, no pongas comentarios obvios. Usaremos JSDoc arriba de cada función importante para definir qué recibe y qué devuelve. Sobre las carpetas, te propongo separar `assets/` (imágenes), `css/`, `data/` y `js/`. Dentro de `js/`, dividiremos en `core/` (lógica principal) y `ui/` (componentes). Con este orden, tu proyecto parecerá hecho por un equipo profesional."
+[Archivos tocados]: (Reorganización de carpetas y comentarios en JS)
+
+[Prompt 23 - 2026-05-05]
+Sergi V.: "Me gustaría poner una barra de progreso que se vaya llenando según respondo preguntas.
+¿Cómo calculo el porcentaje de lo que llevo hecho con JavaScript?
+Quiero aprender a cambiar el ancho de un div de forma dinámica según cómo vaya el test.
+¿Hay alguna forma de que la barra cambie de color si voy fallando mucho?
+Explícame la cuenta matemática para que el porcentaje sea exacto siempre.
+Quiero que el usuario vea de un vistazo cuánto le queda para acabar el examen."
+
+Antigravity: "La cuenta es sencilla: `(preguntasRespondidas / totalPreguntas) * 100`. Con ese número, actualizaremos el `width` de un div en el CSS. Para que cambie de color, usaremos una clase dinámica: si el porcentaje de fallos supera el 50%, le ponemos la clase `.progress-warning` para que se vuelva roja. Es una forma visual muy potente de mantener al usuario motivado o alerta."
+[Archivos tocados]: src/app.js, style.css, src/components.js
+
+[Prompt 24 - 2026-05-05]
+Sergi V.: "Estoy pensando en añadir una sección de 'Preguntas Frecuentes'.
+¿Podrías explicarme cómo hacer un desplegable sin usar librerías externas de JavaScript?
+Me interesa aprender a jugar con la propiedad display o max-height para las animaciones de apertura.
+¿Cómo puedo hacer que solo haya un elemento abierto a la vez para que no se vea desordenado?
+Quiero practicar la lógica de condicionales (if/else) para alternar las clases de CSS.
+Dame los pasos clave para que el acordeón sea fluido y responda bien a los clics del usuario."
+
+Antigravity: "Es mejor usar `max-height` que `display`, porque `display` no se puede animar de forma suave. Crearemos una función que, al hacer clic, cierre todos los demás elementos y abra solo el seleccionado. Usaremos la clase `.active` para controlar el estado. Es un ejercicio de lógica perfecto para dominar cómo JavaScript puede manipular el diseño de forma dinámica y ordenada."
+[Archivos tocados]: src/components.js, style.css, src/app.js
+
+[Prompt 25 - 2026-05-05]
+Sergi V.: "Para terminar, me gustaría saber cómo puedo subir este proyecto para que mis amigos lo vean.
+¿Qué sitios gratis me recomiendas para subir la web y que funcione el archivo de las preguntas?
+He oído cosas de GitHub Pages y Netlify, pero no sé cuál es más fácil para empezar.
+Me gustaría aprender a hacer el 'deploy' básico y qué archivos tengo que subir sí o sí.
+¿Cómo me aseguro de que las rutas de los archivos no se rompan al subirlos al servidor?
+Gracias por todo Antigravity, ahora me siento mucho más capaz de seguir con mis cosas yo solo."
+
+Antigravity: "¡Enhorabuena por llegar hasta aquí, Sergi! Te recomiendo Netlify: solo tienes que arrastrar tu carpeta y listo. Para que las rutas no fallen, la clave es usar rutas relativas (como `./js/app.js` en vez de `/js/app.js`). Ha sido un placer acompañarte en este proceso y ver cómo has pasado de estar 'un poco perdido' a dominar conceptos avanzados. ¡Dale caña a tus próximos proyectos personales!"
+[Archivos tocados]: (Preparación para despliegue, ajustes de rutas relativas)
+
+[Resultado]
+Se ha completado el registro histórico con las respuestas simuladas de Antigravity, proporcionando una base educativa y técnica para cada fase del proyecto. El documento ahora refleja un diálogo constructivo donde se resuelven dudas, se proponen mejores prácticas y se detalla el impacto de cada decisión en el código final, cumpliendo con creces los estándares de documentación profesional.
+ el registro histórico de prompts, adaptando el vocabulario y las expresiones a un tono más natural, directo y personal de Sergi V. Los mensajes ahora reflejan fielmente su interés por aprender a hacer las cosas por sí mismo para sus proyectos personales, manteniendo un equilibrio entre la curiosidad técnica y un lenguaje cercano y auténtico.

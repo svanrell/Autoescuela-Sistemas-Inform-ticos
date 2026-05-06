@@ -1,0 +1,80 @@
+{
+    "exams": [
+        {
+            "id": "hardware",
+            "title": "Certificación: Hardware Experto",
+            "description": "Domina los componentes físicos, desde la CPU hasta la placa base.",
+            "icon": "🔌",
+            "questions": [
+                { "question": "¿Qué componente se encarga de realizar las operaciones aritméticas y lógicas?", "options": ["Memoria RAM", "Disco Duro", "CPU (ALU)", "Tarjeta Gráfica"], "correct": 2, "category": "Hardware" },
+                { "question": "¿Cuál es la función principal del Northbridge?", "options": ["Gestionar USB", "Conectar CPU con RAM y GPU", "Controlar Audio", "Gestionar BIOS"], "correct": 1, "category": "Hardware" },
+                { "question": "¿Qué tipo de memoria es volátil?", "options": ["ROM", "SSD", "RAM", "BIOS"], "correct": 2, "category": "Hardware" },
+                { "question": "¿Qué bus conecta la CPU directamente con la memoria RAM?", "options": ["Front Side Bus (FSB)", "SATA", "PCI Express", "USB"], "correct": 0, "category": "Hardware" },
+                { "question": "¿Qué significan las siglas SSD?", "options": ["Super Speed Disk", "Solid State Drive", "System Storage Device", "Secure Static Drive"], "correct": 1, "category": "Hardware" }
+            ]
+        },
+        {
+            "id": "linux",
+            "title": "Maestría en Linux y Comandos",
+            "description": "Gestión de archivos, permisos y administración del sistema.",
+            "icon": "🐧",
+            "questions": [
+                { "question": "¿Qué comando cambia los permisos de un archivo?", "options": ["chown", "chmod", "mv", "cp"], "correct": 1, "category": "Linux" },
+                { "question": "¿Cómo se listan archivos detalladamente?", "options": ["ls -l", "dir", "list", "ls -a"], "correct": 0, "category": "Linux" },
+                { "question": "¿Qué comando muestra el uso de memoria?", "options": ["free", "top", "df", "ps"], "correct": 1, "category": "Linux" },
+                { "question": "¿Qué comando se usa para ver las últimas líneas de un archivo?", "options": ["head", "cat", "tail", "grep"], "correct": 2, "category": "Linux" },
+                { "question": "¿Cuál es el directorio raíz en Linux?", "options": ["/home", "/root", "/", "/bin"], "correct": 2, "category": "Linux" }
+            ]
+        },
+        {
+            "id": "redes",
+            "title": "Redes e Infraestructura",
+            "description": "Protocolos, IP y configuración de servicios de red.",
+            "icon": "🌐",
+            "questions": [
+                { "question": "¿Cuál es el puerto por defecto de HTTPS?", "options": ["80", "21", "443", "22"], "correct": 2, "category": "Redes" },
+                { "question": "¿Qué protocolo asigna IPs automáticamente?", "options": ["DNS", "DHCP", "HTTP", "FTP"], "correct": 1, "category": "Redes" },
+                { "question": "¿Cuál es la IP de localhost?", "options": ["192.168.1.1", "127.0.0.1", "10.0.0.1", "255.255.255.255"], "correct": 1, "category": "Redes" },
+                { "question": "¿Qué capa del modelo OSI se encarga del enrutamiento?", "options": ["Capa Física", "Capa de Enlace", "Capa de Red", "Capa de Transporte"], "correct": 2, "category": "Redes" },
+                { "question": "¿Qué protocolo se utiliza para la transferencia de archivos?", "options": ["SMTP", "FTP", "SNMP", "SSH"], "correct": 1, "category": "Redes" }
+            ]
+        },
+        {
+            "id": "windows",
+            "title": "Administración de Windows",
+            "description": "Comandos CMD, PowerShell y gestión de usuarios.",
+            "icon": "🪟",
+            "questions": [
+                { "question": "En CMD, ¿qué comando muestra la configuración de red?", "options": ["ifconfig", "ipconfig", "netstat", "route"], "correct": 1, "category": "Windows" },
+                { "question": "¿Qué herramienta se usa para gestionar directivas de grupo?", "options": ["gpedit.msc", "regedit", "taskmgr", "msconfig"], "correct": 0, "category": "Windows" },
+                { "question": "¿Cuál es la consola de comandos avanzada de Windows?", "options": ["CMD", "PowerShell", "Terminal", "Bash"], "correct": 1, "category": "Windows" },
+                { "question": "¿Qué comando crea un directorio en Windows?", "options": ["cd", "md", "rd", "dir"], "correct": 1, "category": "Windows" },
+                { "question": "¿Qué sistema de archivos es el estándar en Windows 10/11?", "options": ["FAT32", "EXT4", "NTFS", "APFS"], "correct": 2, "category": "Windows" }
+            ]
+        },
+        {
+            "id": "seguridad",
+            "title": "Ciberseguridad Básica",
+            "description": "Conceptos de seguridad, cifrado y amenazas.",
+            "icon": "🛡️",
+            "questions": [
+                { "question": "¿Qué tipo de ataque intenta adivinar una contraseña probando todas las combinaciones?", "options": ["Phishing", "SQL Injection", "Fuerza Bruta", "DoS"], "correct": 2, "category": "Seguridad" },
+                { "question": "¿Qué protocolo cifra la navegación web?", "options": ["HTTP", "HTTPS", "FTP", "Telnet"], "correct": 1, "category": "Seguridad" },
+                { "question": "¿Qué es un Firewall?", "options": ["Un antivirus", "Un sistema de filtrado de tráfico", "Un acelerador de red", "Una base de datos de virus"], "correct": 1, "category": "Seguridad" },
+                { "question": "¿Qué tipo de software malicioso cifra tus archivos y pide un rescate?", "options": ["Spyware", "Ransomware", "Adware", "Trojan"], "correct": 1, "category": "Seguridad" }
+            ]
+        },
+        {
+            "id": "cloud",
+            "title": "Virtualización y Cloud",
+            "description": "Contenedores, máquinas virtuales y nube.",
+            "icon": "☁️",
+            "questions": [
+                { "question": "En Docker, ¿qué comando descarga una imagen del registro?", "options": ["docker push", "docker pull", "docker run", "docker build"], "correct": 1, "category": "Cloud" },
+                { "question": "¿Qué es un hipervisor de Tipo 1?", "options": ["Corre sobre un SO", "Corre directamente sobre el hardware", "Es una aplicación web", "Es un tipo de disco duro"], "correct": 1, "category": "Cloud" },
+                { "question": "¿Qué herramienta de orquestación de contenedores es la más usada?", "options": ["Docker Compose", "Kubernetes", "VirtualBox", "VMware"], "correct": 1, "category": "Cloud" },
+                { "question": "¿Qué significa SaaS?", "options": ["Storage as a Service", "System as a Service", "Software as a Service", "Secure as a Service"], "correct": 2, "category": "Cloud" }
+            ]
+        }
+    ]
+}
