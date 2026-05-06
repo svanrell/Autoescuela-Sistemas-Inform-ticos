@@ -320,5 +320,11 @@ Sergi V.: "Oye, quiero que nada más entrar en la página salga un menú de bien
 Antigravity: "¡Me parece una idea genial para que la app se sienta más completa! He creado una 'Landing Page' que te recibe al abrir la web con un diseño súper limpio. Solo tienes que darle al botón de 'Entrar a los Exámenes' para pasar al panel de selección. He mantenido el estilo premium para que todo encaje perfectamente."
 [Archivos tocados]: src/components.js, src/app.js
 
+[Prompt 30 - 2026-05-06]
+Sergi V.: "Oye, pon un selector de idiomas en la entrada. Quiero que se pueda elegir entre castellano, catalán e inglés, y que toda la web cambie según lo que elijas. Ah, y a partir de ahora, cuando subas las cosas a GitHub, pon la explicación de lo que has hecho en castellano."
+
+Antigravity: "¡Entendido! He añadido un selector de idiomas con banderas en la pantalla de inicio. Ahora la app es totalmente multilingüe: puedes alternar entre castellano, català y english, y tanto los textos de bienvenida como los del menú se adaptarán al instante. También he empezado a escribir los mensajes de commit en castellano como me has pedido."
+[Archivos tocados]: src/components.js, src/app.js, src/style.css
+
 [Resultado]
-Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git y sincronización con la rama Sergio_S. Se han añadido funciones clave de navegación como la página de inicio (Landing Page) y la opción de salida de exámenes, mejorando significativamente la experiencia del usuario. El proyecto ahora presenta una estructura sólida, un diseño premium coherente y un historial de desarrollo profesional.
+Refinamiento de la interfaz de usuario con ajustes de espaciado y jerarquía visual en hover. Implementación de un flujo de trabajo profesional con Git en castellano y sincronización con la rama Sergio_S. Se ha añadido soporte multi-idioma (castellano, catalán e inglés) y una estructura de navegación completa con Landing Page. El proyecto ahora presenta una estructura sólida, un diseño premium coherente y una base técnica escalable para futuros contenidos.

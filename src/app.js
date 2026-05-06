@@ -11,7 +11,47 @@ const state = {
     score: 0,
     isAnswered: false,
     view: 'home', // 'home', 'menu', 'test', 'results', 'history'
+    lang: localStorage.getItem('userLang') || 'es',
     history: JSON.parse(localStorage.getItem('examHistory') || '[]')
+};
+
+const translations = {
+    es: {
+        welcome: "¡Bienvenido a la Autoescuela de Sistemas!",
+        desc: "La plataforma definitiva para dominar tus exámenes de sistemas informáticos. Hardware, Redes, Linux y más, con tests interactivos diseñados para tu éxito.",
+        start: "Entrar a los Exámenes",
+        footer: "Prepárate para el futuro de la informática.",
+        choose: "Elige tu desafío",
+        choose_desc: "Selecciona un examen para comenzar o revisa tu historial.",
+        history_btn: "📜 Ver Historial de Exámenes",
+        questions_count: "Preguntas",
+        confirm_exit: "¿Seguro que quieres salir del examen? No se guardará tu progreso.",
+        back_menu: "Finalizar y Volver"
+    },
+    ca: {
+        welcome: "Benvingut a l'Autoescola de Sistemes!",
+        desc: "La plataforma definitiva per dominar els teus exàmens de sistemes informàtics. Hardware, Xarxes, Linux i més, amb tests interactius dissenyats per al teu èxit.",
+        start: "Entrar als Exàmens",
+        footer: "Prepara't per al futur de la informàtica.",
+        choose: "Tria el teu desafiament",
+        choose_desc: "Selecciona un examen per començar o revisa el teu historial.",
+        history_btn: "📜 Veure Historial d'Exàmens",
+        questions_count: "Preguntes",
+        confirm_exit: "Segur que vols sortir de l'examen? No es guardarà el teu progrés.",
+        back_menu: "Finalitzar i Tornar"
+    },
+    en: {
+        welcome: "Welcome to the Systems School!",
+        desc: "The ultimate platform to master your computer systems exams. Hardware, Networks, Linux and more, with interactive tests designed for your success.",
+        start: "Enter Exams",
+        footer: "Prepare for the future of IT.",
+        choose: "Choose your challenge",
+        choose_desc: "Select an exam to start or check your history.",
+        history_btn: "📜 View Exam History",
+        questions_count: "Questions",
+        confirm_exit: "Are you sure you want to exit the exam? Your progress will not be saved.",
+        back_menu: "Finish and Return"
+    }
 };
 
 const appContainer = document.getElementById('app');
@@ -28,15 +68,16 @@ async function init() {
 }
 
 function render() {
+    const t = translations[state.lang];
     appContainer.innerHTML = components.createHeader("Sistemas Pro");
 
     switch (state.view) {
         case 'home':
-            appContainer.innerHTML += components.createLanding();
+            appContainer.innerHTML += components.createLanding(t, state.lang);
             setupLandingListeners();
             break;
         case 'menu':
-            appContainer.innerHTML += components.createMenu({ exams: state.allExams });
+            appContainer.innerHTML += components.createMenu({ exams: state.allExams }, t);
             setupMenuListeners();
             break;
         case 'test':
@@ -56,6 +97,14 @@ function setupLandingListeners() {
     document.getElementById('start-app-btn').addEventListener('click', () => {
         state.view = 'menu';
         render();
+    });
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            state.lang = btn.dataset.lang;
+            localStorage.setItem('userLang', state.lang);
+            render();
+        });
     });
 }
 
@@ -92,7 +141,7 @@ function renderTest() {
     });
 
     document.getElementById('exit-exam-btn').addEventListener('click', () => {
-        if (confirm('¿Seguro que quieres salir del examen? No se guardará tu progreso.')) {
+        if (confirm(translations[state.lang].confirm_exit)) {
             state.view = 'menu';
             render();
         }
